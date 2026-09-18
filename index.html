@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MetroSuite — Metrología, Datos Críticos y Generador de Formularios Dinámicos | Stracta</title>
 <meta name="description" content="MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos: valida, corrige y audita en tiempo real. Incluye un generador de formularios dinámicos y seguros por plantilla. Cumple ISO/IEC 17025 y CFR 21 Part 11. Soporte nativo en español para Colombia y LatAm.">
-<meta name="keywords" content="metrología empresarial, adquisición de datos críticos, generador de formularios dinámicos, calibración de balanzas, calibración de básculas camioneras, calibración dimensional, calibración de temperatura y presión, formularios dinámicos seguros, ISO 17025, validación en tiempo real, PaaS metrología, CFR 21 Part 11, software calidad Colombia">
+<meta name="keywords" content="metrología empresarial, adquisición de datos críticos, generador de formularios dinámicos, calibración de balanzas, calibración de básculas camioneras, calibración dimensional, calibración de temperatura y presión, formularios dinámicos seguros, ISO 17025, validación en tiempo real, PaaS metrología, CFR 21 Part 11, software calidad Colombia, captura de datos en campo, checklist de mantenimiento, inspecciones técnicas digitales, alternativa a Google Forms para industria">
 <meta property="og:title" content="MetroSuite — Metrología, datos críticos y formularios dinámicos, validados en tiempo real">
 <meta property="og:description" content="Plataforma PaaS multitenant que valida, corrige y audita datos de metrología en tiempo real, con un generador de formularios dinámicos y seguros por plantilla. Workflows, agentes IA y cumplimiento ISO/IEC 17025.">
 <meta property="og:locale" content="es_CO">
@@ -88,6 +88,7 @@
         { "@type": "Question", "name": "Mi equipo no sabe usar software nuevo", "acceptedAnswer": { "@type": "Answer", "text": "El onboarding es guiado, la interfaz está pensada para no requerir manual, y el soporte se da en español, en su huso horario." } },
         { "@type": "Question", "name": "Ya usamos Excel", "acceptedAnswer": { "@type": "Answer", "text": "Excel no valida ni audita solo. En la comparativa se puede ver punto por punto lo que MetroSuite automatiza y que hoy se revisa a mano." } },
         { "@type": "Question", "name": "El costo es alto", "acceptedAnswer": { "@type": "Answer", "text": "El retorno se mide en menos reprocesos, menos horas corrigiendo hojas de cálculo y una acreditación protegida frente a un solo dato mal capturado." } },
+        { "@type": "Question", "name": "Solo necesito un checklist simple, no una acreditación", "acceptedAnswer": { "@type": "Answer", "text": "MetroSuite parte de la misma plantilla simple que usaría en Google Forms o Jotform, pero con cálculos y validación desde el primer campo. Cuando su operación lo requiera, esa misma información ya está lista para una auditoría, sin migrar de herramienta." } },
         { "@type": "Question", "name": "No confiamos en proveedores extranjeros", "acceptedAnswer": { "@type": "Answer", "text": "Stracta ofrece soporte local en español, con respaldo y estándares internacionales." } },
         { "@type": "Question", "name": "Dependemos de la conexión a internet", "acceptedAnswer": { "@type": "Answer", "text": "El front funciona en modo offline, con sincronización automática, redundancia y copias de respaldo cifradas." } },
         { "@type": "Question", "name": "Nos preocupa migrar los datos", "acceptedAnswer": { "@type": "Answer", "text": "La migración es asistida por el equipo de Stracta. La importación se mide en horas, no en semanas." } }
@@ -330,8 +331,7 @@
   tbody tr:last-child td, tbody tr:last-child th{ border-bottom:none; }
 
   /* ---------- recursos ---------- */
-  .article-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
-  @media (max-width:900px){ .article-grid{ grid-template-columns:1fr; } }
+  .article-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; }
   .article{ border-top:2px solid var(--line-strong); padding-top:1.1rem; }
   .article a{ text-decoration:none; color:var(--ink); }
   .article h3{ margin-bottom:.6rem; }
@@ -392,6 +392,7 @@
       <li><a href="#funcionalidades">Funcionalidades</a></li>
       <li><a href="#calibraciones">Calibraciones</a></li>
       <li><a href="#comparativa">Comparativa</a></li>
+      <li><a href="#campo">Datos en campo</a></li>
       <li><a href="#recursos">Recursos</a></li>
       <li><a href="#precios">Precios</a></li>
       <li><a href="#preguntas">Preguntas</a></li>
@@ -666,6 +667,53 @@
     </div>
   </section>
 
+  <!-- DATOS EN CAMPO -->
+  <section id="campo">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">más allá del laboratorio</div>
+        <h2>¿Solo necesita tomar datos en campo? También es para eso.</h2>
+        <p style="margin-top:.75rem;">Mantenimientos, inspecciones, checklists e informes técnicos comparten el mismo problema que un laboratorio acreditado: el dato se toma una sola vez, en campo, y tiene que ser confiable. Muchos equipos hoy usan formularios genéricos — Google Forms, Typeform, Jotform, Formy — y tropiezan con lo mismo: no procesan nada, no validan nada, y se quedan sin señal justo donde más se necesitan.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th></th><th>Formulario genérico</th><th>MetroSuite</th><th>Qué gana el negocio</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Cálculos sobre el dato</th>
+              <td>Guarda texto y números planos, sin procesar</td>
+              <td class="win">Motor de cálculos activo: ejecuta fórmulas, promedios y tolerancias en el dispositivo, en tiempo real</td>
+              <td>El operario sabe si el equipo pasó o falló la prueba en el mismo instante</td>
+            </tr>
+            <tr>
+              <th>Conectividad</th>
+              <td>Depende de internet al 100% para funcionar</td>
+              <td class="win">Modo offline con sincronización transparente, heredado de la misma arquitectura logística de MetroSuite</td>
+              <td>Funciona en minas, plantas aisladas o sótanos sin perder un solo dato</td>
+            </tr>
+            <tr>
+              <th>Integridad del dato</th>
+              <td>Campos editables, sin control de versiones</td>
+              <td class="win">Estructura inmutable en PostgreSQL, con historial auditable de cada registro</td>
+              <td>Reportes listos para certificar ante clientes o entes de control, sin alterar el pasado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="offline-note" style="margin-top:3rem;">
+        <span class="icon">↗</span>
+        <div>
+          <h3>Empiece con un checklist. Crezca sin cambiar de herramienta.</h3>
+          <p>Arme hoy una plantilla simple de inspección o mantenimiento — es tan rápido como en un formulario genérico. El mismo motor que la valida es el que, cuando su operación lo exija, sostiene una acreditación ISO/IEC 17025 completa. No hay que migrar de plataforma cuando el negocio crece.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- RECURSOS / BLOG -->
   <section id="recursos">
     <div class="wrap">
@@ -693,6 +741,13 @@
           <a href="conectar-balanzas-industriales-web.html">
             <h3>Cómo conectar balanzas industriales a sistemas web por protocolos seriales</h3>
             <p>Web Serial API, RS-232/RS-485 y una arquitectura paso a paso para leer el peso de una balanza directamente en la nube, sin drivers ni software local.</p>
+            <span class="read">Leer artículo →</span>
+          </a>
+        </article>
+        <article class="article">
+          <a href="checklist-mantenimiento-datos-campo.html">
+            <h3>De Google Forms a datos que se validan solos</h3>
+            <p>Tres señales de que un checklist de mantenimiento o una inspección técnica ya superaron lo que un formulario genérico puede ofrecer.</p>
             <span class="read">Leer artículo →</span>
           </a>
         </article>
@@ -766,6 +821,10 @@
         <details class="faq-item">
           <summary>Dependemos de la conexión a internet</summary>
           <p>El front funciona en modo offline, con sincronización automática, redundancia y copias de respaldo cifradas.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Solo necesito un checklist simple, no una acreditación</summary>
+          <p>MetroSuite parte de la misma plantilla simple que usaría en Google Forms o Jotform, pero con cálculos y validación desde el primer campo. Cuando su operación lo requiera, esa misma información ya está lista para una auditoría, sin migrar de herramienta.</p>
         </details>
         <details class="faq-item">
           <summary>Nos preocupa migrar los datos</summary>
