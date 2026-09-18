@@ -1,76 +1,131 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025 | MetroSuite</title>
+    <meta name="description" content="El numeral 7.11 de ISO/IEC 17025 exige proteger los datos contra alteración o pérdida. Cómo una arquitectura de base de datos inmutable (append-only) blinda la trazabilidad de un laboratorio frente a auditores como ONAC o A2LA.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://metrosuite.app/iso17025-bases-datos-inmutables.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025">
+    <meta property="og:description" content="Por qué una arquitectura append-only, sin sobreescritura de datos, es el blindaje técnico para mantener la acreditación ISO/IEC 17025 ante cualquier auditoría.">
+    <meta property="og:url" content="https://metrosuite.app/iso17025-bases-datos-inmutables.html">
+    <meta property="og:locale" content="es_CO">
+    <meta property="article:published_time" content="2026-09-15">
+    <meta property="article:author" content="Equipo Stracta">
+    <meta property="article:section" content="Infraestructura Industrial">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025",
+      "description": "El numeral 7.11 de ISO/IEC 17025 exige proteger los datos contra alteración o pérdida. Cómo una arquitectura de base de datos inmutable (append-only) blinda la trazabilidad de un laboratorio.",
+      "datePublished": "2026-09-15",
+      "dateModified": "2026-09-15",
+      "inLanguage": "es-CO",
+      "articleSection": "Infraestructura Industrial",
+      "url": "https://metrosuite.app/iso17025-bases-datos-inmutables.html",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://metrosuite.app/iso17025-bases-datos-inmutables.html" },
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo Stracta",
+        "url": "https://stracta.pro"
+      },
+      "publisher": { "@id": "https://stracta.pro/#organization" },
+      "about": { "@id": "https://metrosuite.app/#software" }
+    }
+    </script>
+
     <style>
         :root { --primary: #0f172a; --accent: #059669; --text: #334155; --bg: #f8fafc; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: var(--text); background: var(--bg); margin: 0; padding: 20px; }
         .container { max-width: 750px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        h1 { color: var(--primary); font-size: 2.2rem; line-height: 1.3; margin-bottom: 20px; }
+        h1 { color: var(--primary); font-size: 2.2rem; line-height: 1.3; margin-bottom: 12px; }
         h2 { color: var(--primary); font-size: 1.5rem; margin-top: 35px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
         p { margin-bottom: 20px; font-size: 1.05rem; }
         ul { margin-bottom: 25px; padding-left: 20px; }
         li { margin-bottom: 10px; font-size: 1.05rem; }
         strong { color: var(--primary); }
         code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.95rem; }
+        .meta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; color: #64748b; font-size: 0.9rem; margin: 14px 0 30px; }
+        .tldr { background: #f1f5f9; border-left: 4px solid #64748b; padding: 20px 25px; border-radius: 0 8px 8px 0; margin: 0 0 35px; }
+        .tldr p { margin: 0; font-size: 1rem; }
         .alert-box { background: #ecfdf5; border-left: 4px solid var(--accent); padding: 25px; border-radius: 0 8px 8px 0; margin: 40px 0; }
         .alert-box h4 { margin: 0 0 10px 0; color: var(--accent); font-size: 1.2rem; }
         .btn-cta { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; margin-top: 15px; transition: background 0.2s; }
         .btn-cta:hover { background: #047857; }
         .badge { background: #d1fae5; color: #065f46; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+        .internal-links { margin-top: 40px; padding-top: 25px; border-top: 1px solid #e2e8f0; }
+        .internal-links h4 { color: var(--primary); font-size: 1rem; margin-bottom: 12px; }
+        .internal-links ul { padding-left: 0; list-style: none; margin-bottom: 0; }
+        .internal-links li { margin-bottom: 8px; font-size: 0.98rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: #64748b; text-decoration: none; font-size: 0.95rem; font-weight: 500; margin-bottom: 25px; transition: color 0.2s; }
+        .back-link:hover { color: var(--accent); }
     </style>
 </head>
 <body>
 
     <article class="container">
-        <!-- Botón Volver -->
-<a href="#" onclick="window.history.back(); return false;" style="
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: #64748b;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 25px;
-    transition: color 0.2s;
-" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='#64748b'">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M19 12H5M12 19l-7-7 7-7"/>
-    </svg>
-    Volver
-</a>
+
+        <a href="https://metrosuite.app/#recursos" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Volver a recursos
+        </a>
 
         <span class="badge">Infraestructura Industrial</span>
         <h1>Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025</h1>
-        
+
+        <div class="meta-row">
+            <span>Por <strong>Equipo Stracta</strong></span>
+            <span>·</span>
+            <time datetime="2026-09-15">15 de septiembre de 2026</time>
+            <span>·</span>
+            <span>5 min de lectura</span>
+        </div>
+
+        <div class="tldr">
+            <p><strong>En resumen:</strong> el numeral 7.11 de ISO/IEC 17025 exige proteger los datos contra alteración o pérdida. Una base de datos <strong>inmutable (append-only)</strong> no sobreescribe ni borra registros históricos: cada corrección queda anexada y enlazada al dato original mediante una pista de auditoría, lo que permite reconstruir el historial completo de cualquier medición ante un auditor, y bloquea el borrado accidental o intencional de calibraciones fallidas.</p>
+        </div>
+
         <p>Para los laboratorios de ensayo y calibración, la acreditación bajo la norma <strong>ISO/IEC 17025</strong> representa su licencia para operar en el mercado global. El numeral 7.11 de la norma establece directrices estrictas sobre la gestión de datos e información, exigiendo que los sistemas de software utilizados estén validados y protegidos contra alteraciones o pérdidas de datos.</p>
-        
+
         <p>En el diseño moderno de sistemas de información de laboratorios, la adopción de <strong>arquitecturas de bases de datos inmutables</strong> ha pasado de ser una buena práctica de ingeniería a convertirse en el blindaje definitivo para mantener la acreditación técnica.</p>
 
         <h2>¿Qué es una base de datos inmutable en entornos de metrología?</h2>
         <p>En una base de datos relacional tradicional, las operaciones comunes son crear, leer, actualizar y borrar (CRUD). En un entorno <strong>inmutable</strong>, la operación de "actualizar" o "borrar" registros históricos está estrictamente prohibida a nivel de base de datos.</p>
-        
+
         <p>Si un técnico comete un error al registrar una incertidumbre de medición y necesita corregirlo, el sistema no sobreescribe el dato existente. En su lugar, realiza una operación de <strong>anexado (Append-Only)</strong>: guarda el nuevo dato como un estado actual y conserva el dato erróneo etiquetado como histórico, enlazando ambos mediante una pista de auditoría lógica.</p>
 
         <h2>Principales ventajas técnicas bajo la ISO/IEC 17025</h2>
-        
+
         <ul>
-            <li><strong>Transparencia absoluta ante auditores:</strong> Durante una auditoría de entes como la ONAC o A2LA, el auditor seleccionará certificados al azar y pedirá rastrear el origen físico del dato. Con una arquitectura inmutable soportada en motores como <code>PostgreSQL</code>, el sistema exporta instantáneamente el historial completo de la vida de ese dato.</li>
-            <li><strong>Sincronización offline segura y sin conflictos:</strong> Los técnicos de metrología suelen tomar datos en campo o en sótanos industriales con interferencia magnética. Las bases de datos inmutables permiten que el dispositivo local almacene las lecturas secuencialmente de forma offline y se anexen cronológicamente en el servidor central al recuperar la señal, eliminando colisiones de datos.</li>
-            <li><strong>Protección total contra el borrado accidental o fraudulento:</strong> Un operario cansado puede intentar borrar una fila de calibraciones fallidas para "limpiar" el reporte. Una base de datos estructurada bajo patrones de persistencia inmutable e inyección de dependencias desacopladas (Principios SOLID) bloquea estas peticiones a nivel de infraestructura.</li>
+            <li><strong>Transparencia absoluta ante auditores:</strong> durante una auditoría de entes como la ONAC o A2LA, el auditor seleccionará certificados al azar y pedirá rastrear el origen físico del dato. Con una arquitectura inmutable soportada en motores como <code>PostgreSQL</code>, el sistema exporta instantáneamente el historial completo de la vida de ese dato.</li>
+            <li><strong>Sincronización offline segura y sin conflictos:</strong> los técnicos de metrología suelen tomar datos en campo o en sótanos industriales con interferencia magnética. Las bases de datos inmutables permiten que el dispositivo local almacene las lecturas secuencialmente de forma offline y se anexen cronológicamente en el servidor central al recuperar la señal, eliminando colisiones de datos.</li>
+            <li><strong>Protección total contra el borrado accidental o fraudulento:</strong> un operario cansado puede intentar borrar una fila de calibraciones fallidas para "limpiar" el reporte. Una base de datos estructurada bajo patrones de persistencia inmutable e inyección de dependencias desacopladas (principios SOLID) bloquea estas peticiones a nivel de infraestructura.</li>
         </ul>
 
-        <h2>El Impacto Operativo: Confianza en el Certificado</h2>
+        <h2>El impacto operativo: confianza en el certificado</h2>
         <p>El valor real de un laboratorio radica en la confianza de sus resultados de medición. Utilizar bases de datos tradicionales expone al sistema a inyecciones de código erróneas o manipulaciones en caliente. La inmutabilidad garantiza que el certificado emitido al cliente final es el reflejo exacto y matemáticamente validado de la física del instrumento en el laboratorio.</p>
 
         <section class="alert-box">
-            <h4>Lieve la integridad de su laboratorio al siguiente nivel</h4>
-            <p><strong>MetroSuite.app</strong> está construido sobre una infraestructura relacional inmutable que automatiza los cálculos de incertidumbre y blinda su información bajo los estándares de la ISO/IEC 17025.</p>
-            <a href="https://metrosuite.app" class="btn-cta">Migrar mis Datos Históricos con Seguridad</a>
+            <h4>Lleve la integridad de su laboratorio al siguiente nivel</h4>
+            <p><strong>MetroSuite</strong> está construido sobre una infraestructura relacional inmutable que automatiza los cálculos de incertidumbre y blinda su información bajo los estándares de la ISO/IEC 17025.</p>
+            <a href="https://metrosuite.app/#contacto" class="btn-cta">Migrar mis datos históricos con seguridad</a>
         </section>
+
+        <nav class="internal-links" aria-label="Seguir leyendo">
+            <h4>Seguir leyendo</h4>
+            <ul>
+                <li><a href="cfr21-part11-excel.html">Cómo prepararse para una auditoría CFR 21 Part 11 sin usar Excel</a></li>
+                <li><a href="conectar-balanzas-industriales-web.html">Cómo conectar balanzas industriales a sistemas web por protocolos seriales</a></li>
+                <li><a href="https://metrosuite.app/#arquitectura">Ver la arquitectura de MetroSuite</a></li>
+            </ul>
+        </nav>
     </article>
 
 </body>
