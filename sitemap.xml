@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+  <!-- Página Principal / Landing Page -->
+  <url>
+    <loc>https://metrosuite.app</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Subpágina: Metrología e ISO 17025 -->
+  <url>
+    <loc>https://metrosuite.app/cfr21-part11-excel.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Subpágina: Integración de Hardware Industrial -->
+  <url>
+    <loc>https://metrosuite.app/iso17025-bases-datos-inmutables.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Subpágina: Desarrollo Blazor y Radzen -->
+  <url>
+    <loc>https://metrosuite.app/conectar-balanzas-industriales-web.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artículo: MVP Desarrollo IA -->
+  <url>
+    <loc>https://metrosuite.app/privacidad</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>

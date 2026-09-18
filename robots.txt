@@ -1,0 +1,35 @@
+# ==========================================
+# Robots.txt optimizado para SEO y GEO - Stracta
+# ==========================================
+
+# Regla General: Permitir a todos los buscadores tradicionales (Google, Bing, Yahoo)
+User-agent: *
+Allow: /
+
+# Permitir explícitamente a los rastreadores de Inteligencia Artificial (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+# Ubicación del Mapa del Sitio para indexación rápida
+Sitemap: https://metrosuite.app

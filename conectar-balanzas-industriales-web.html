@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales | Stracta</title>
+    <style>
+        :root { --primary: #0f172a; --accent: #dc2626; --text: #334155; --bg: #f8fafc; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.7; color: var(--text); background: var(--bg); margin: 0; padding: 20px; }
+        .container { max-width: 750px; margin: 40px auto; background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        h1 { color: var(--primary); font-size: 2.2rem; line-height: 1.3; margin-bottom: 20px; }
+        h2 { color: var(--primary); font-size: 1.5rem; margin-top: 35px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+        h3 { color: var(--primary); font-size: 1.15rem; margin-top: 25px; }
+        p { margin-bottom: 20px; font-size: 1.05rem; }
+        ul { margin-bottom: 25px; padding-left: 20px; }
+        li { margin-bottom: 10px; font-size: 1.05rem; }
+        strong { color: var(--primary); }
+        pre { background: #0f172a; color: #f8fafc; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.95rem; line-height: 1.5; }
+        .diag-box { background: #f1f5f9; border: 1px dashed #cbd5e1; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; text-align: center; margin: 25px 0; color: #334155; }
+        .alert-box { background: #fef2f2; border-left: 4px solid var(--accent); padding: 25px; border-radius: 0 8px 8px 0; margin: 40px 0; }
+        .alert-box h4 { margin: 0 0 10px 0; color: var(--accent); font-size: 1.2rem; }
+        .btn-cta { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 600; margin-top: 15px; transition: background 0.2s; }
+        .btn-cta:hover { background: #b91c1c; }
+        .badge { background: #fee2e2; color: #991b1b; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <article class="container">
+        <span class="badge">Integración de Hardware</span>
+        <h1>Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales</h1>
+        
+        <p>Uno de los mayores desafíos en la digitalización de la cadena de suministro, la metrología y la logística es la brecha entre el hardware físico e industrial y las aplicaciones de software modernas basadas en la nube.</p>
+        
+        <p>Tradicionalmente, para capturar el peso de una balanza camionera o industrial se requería instalar complejos programas de escritorio locales que dependían de drivers propietarios. Hoy en día, es perfectamente viable conectar hardware industrial a un <strong>sistema web en la nube</strong> de forma directa y segura utilizando protocolos seriales como <strong>RS-232 y RS-485</strong>.</p>
+
+        <h2>El Núcleo de la Solución: La API Web Serial</h2>
+        <p>El estándar moderno que hace posible esta comunicación es la <strong>Web Serial API</strong> (soportada nativamente en navegadores basados en Chromium como Google Chrome y Microsoft Edge). Esta API permite que una aplicación web solicite permiso al usuario para conectarse a un puerto COM local de forma directa.</p>
+        
+        <p>Esto elimina por completo la necesidad de instalar ejecutables pesados o software intermediario en las computadoras de los operarios de bodega o analistas de control de calidad.</p>
+
+        <div class="diag-box">
+            [ Balanza Industrial ] ──(RS-232)──► [ Convertidor USB ] ──► [ Navegador Web / Web Serial API ] ──► [ Nube .NET ]
+        </div>
+
+        <h2>Arquitectura de Conexión Paso a Paso</h2>
+        
+        <h3>1. Configuración de los parámetros del hardware</h3>
+        <p>Debe consultar el manual del fabricante del indicador de la balanza (Ohaus, Mettler Toledo, etc.) para conocer la configuración exacta del puerto serie: Baud Rate (usualmente 9600 o 4800 bps), Data Bits (8 bits), Parity y Stop Bits.</p>
+        
+        <h3>2. Apertura del puerto desde el Frontend Web</h3>
+        <p>Utilizando la API del navegador, el sistema solicita acceso al dispositivo. En una aplicación estructurada bajo componentes Blazor o Radzen, la interfaz invoca una función que mapea el flujo de bytes:</p>
+
+<pre><code>// Conexión conceptual mediante Web Serial API
+const port = await navigator.serial.requestPort();
+await port.open({ baudRate: 9600, dataBits: 8, stopBits: 1, parity: "none" });</code></pre>
+        
+        <h3>3. Decodificación de la trama de texto (Parsing)</h3>
+        <p>Las balanzas industriales transmiten cadenas de texto formateadas de forma continua (tramas como <code>ST,GS,+   15.42 kg\r\n</code>). El sistema web debe contar con un módulo desacoplado que actúe como lector de flujos de datos, filtre los caracteres de control, extraiga el valor numérico con precisión y detecte la unidad de medida.</p>
+
+        <h2>Ventajas Operativas para la Planta e Industria</h2>
+        <ul>
+            <li><strong>Despliegues en minutos:</strong> El operario solo entra a una URL web, conecta la balanza y empieza a trabajar sin instalar software local.</li>
+            <li><strong>Eliminación del error por digitación:</strong> Al capturar el peso directamente del hardware, se elimina la posibilidad de que el técnico altere o digite mal un número.</li>
+            <li><strong>Mantenimiento centralizado:</strong> Cualquier actualización de lógica se realiza directamente en el servidor web sin detener las estaciones de trabajo de la planta.</li>
+        </ul>
+
+        <section class="alert-box">
+            <h4>¿Necesita integrar su hardware industrial con la nube?</h4>
+            <p>En <strong>Stracta.pro</strong> somos un estudio especializado en desarrollo .NET de precisión y software industrial. Diseñamos sistemas web capaces de comunicarse fluidamente con básculas, lectores RFID y maquinaria de planta bajo principios SOLID.</p>
+            <a href="https://stracta.pro" class="btn-cta">Hablar con un Arquitecto de Software</a>
+        </section>
+    </article>
+
+</body>
+</html>
