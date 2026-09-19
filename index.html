@@ -754,47 +754,226 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- RECURSOS / BLOG -->
-  <section id="recursos">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">recursos</div>
-        <h2>Recursos y buenas prácticas en metrología</h2>
-      </div>
+<!-- ======================================================== -->
+<!-- SECCIÓN DE RECURSOS TÉCNICOS Y BLOG - METROSUITE         -->
+<!-- ======================================================== -->
+<section class="resources-section">
+    <div class="resources-container">
+        
+        <!-- Encabezado de la Sección -->
+        <div class="resources-header">
+            <span class="section-badge">Centro de Conocimiento</span>
+            <h2>Recursos Técnicos e Ingeniería de Datos</h2>
+            <p>Análisis detallados sobre cumplimiento regulatorio, arquitecturas de software industrial e integridad del dato en entornos de misión crítica.</p>
+        </div>
 
-      <div class="article-grid">
-        <article class="article">
-          <a href="cfr21-part11-excel.html">
-            <h3>Qué es CFR 21 Part 11 y cómo cumplirlo sin reprocesos</h3>
-            <p>Una guía práctica sobre los requisitos de registros electrónicos y firmas electrónicas, y qué implica cumplirlos en un laboratorio real.</p>
-            <span class="read">Leer artículo →</span>
-          </a>
-        </article>
-        <article class="article">
-          <a href="iso17025-bases-datos-inmutables.html">
-            <h3>Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025</h3>
-            <p>Por qué una arquitectura append-only, sin sobreescritura de datos, es el blindaje técnico para mantener la acreditación ante cualquier auditoría.</p>
-            <span class="read">Leer artículo →</span>
-          </a>
-        </article>
-        <article class="article">
-          <a href="conectar-balanzas-industriales-web.html">
-            <h3>Cómo conectar balanzas industriales a sistemas web por protocolos seriales</h3>
-            <p>Web Serial API, RS-232/RS-485 y una arquitectura paso a paso para leer el peso de una balanza directamente en la nube, sin drivers ni software local.</p>
-            <span class="read">Leer artículo →</span>
-          </a>
-        </article>
-        <article class="article">
-          <a href="google-forms-datos-validados.html">
-            <h3>De Google Forms a datos que se validan solos</h3>
-            <p>Tres señales de que un checklist de mantenimiento o una inspección técnica ya superaron lo que un formulario genérico puede ofrecer.</p>
-            <span class="read">Leer artículo →</span>
-          </a>
-        </article>
-      </div>
+        <!-- Grilla de Tarjetas (UI Cards Grid) -->
+        <div class="resources-grid">
 
-      <p class="resources-more"><a href="#">Ver todos los artículos →</a></p>
+            <!-- Tarjeta 1: CFR 21 Part 11 -->
+            <article class="resource-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-badge badge-regulatory">Cumplimiento</span>
+                        <span class="read-time">5 min de lectura</span>
+                    </div>
+                    <h3 class="card-title">Cómo prepararse para una auditoría CFR 21 Part 11 sin usar Excel</h3>
+                    <p class="card-excerpt">Un análisis técnico sobre por qué las hojas de cálculo tradicionales violan los pilares de integridad, auditoría e inmutabilidad exigidos por la FDA, y cómo estructurar una migración segura.</p>
+                    <a href="/cfr21-part11-excel.html" class="card-link">
+                        Leer artículo técnico
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 2: ISO 17025 -->
+            <article class="resource-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-badge badge-infrastructure">Infraestructura</span>
+                        <span class="read-time">6 min de lectura</span>
+                    </div>
+                    <h3 class="card-title">Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025</h3>
+                    <p class="card-excerpt">Evaluación de las arquitecturas estructuradas bajo patrones 'Append-Only' en motores relacionales y cómo blindan la trazabilidad física de los laboratorios ante auditorías de acreditación.</p>
+                    <a href="/iso17025-bases-datos-inmutables.html" class="card-link">
+                        Leer artículo técnico
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3: Conexión Serial -->
+            <article class="resource-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-badge badge-hardware">Integración</span>
+                        <span class="read-time">5 min de lectura</span>
+                    </div>
+                    <h3 class="card-title">Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales</h3>
+                    <p class="card-excerpt">Guía de implementación técnica utilizando la API Web Serial nativa del navegador para capturar lecturas inmutables de básculas RS-232 y RS-485 sin instalar software local pesado.</p>
+                    <a href="/conectar-balanzas-industriales-web.html" class="card-link">
+                        Leer artículo técnico
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tarjeta 4: Google Forms / Campo -->
+            <article class="resource-card">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-badge badge-field">Procesos</span>
+                        <span class="read-time">6 min de lectura</span>
+                    </div>
+                    <h3 class="card-title">De Google Forms a datos autovalidados: Análisis de controles en checklists</h3>
+                    <p class="card-excerpt">Evaluación de los vectores de riesgo operativo al usar formularios HTTP convencionales en el piso de planta y cómo diseñar sistemas robustos con persistencia local y validación offline.</p>
+                    <a href="/google-forms-datos-validados.html" class="card-link">
+                        Leer artículo técnico
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div>
     </div>
-  </section>
+</section>
+
+<!-- ======================================================== -->
+<!-- ESTILOS CSS COMPATIBLES Y RESPONSIVOS                    -->
+<!-- ======================================================== -->
+<style>
+    .resources-section {
+        padding: 80px 20px;
+        background-color: #f8fafc; /* Color de fondo limpio e industrial */
+    }
+    .resources-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .resources-header {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 50px;
+    }
+    .section-badge {
+        display: inline-block;
+        background-color: #e2e8f0;
+        color: #475569;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 16px;
+    }
+    .resources-header h2 {
+        color: #0f172a;
+        font-size: 2.25rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 16px 0;
+    }
+    .resources-header p {
+        color: #64748b;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    .resource-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .resource-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.08);
+        border-color: #cbd5e1;
+    }
+    .card-content {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .card-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .card-badge {
+        font-size: 0.78rem;
+        font-weight: 600;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    .badge-regulatory { background-color: #eff6ff; color: #2563eb; }
+    .badge-infrastructure { background-color: #ecfdf5; color: #059669; }
+    .badge-hardware { background-color: #fef2f2; color: #dc2626; }
+    .badge-field { background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+    
+    .read-time {
+        font-size: 0.85rem;
+        color: #94a3b8;
+    }
+    .card-title {
+        color: #0f172a;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0 0 12px 0;
+        min-height: 56px; /* Mantiene la alineación visual si los títulos varían en líneas */
+    }
+    .card-excerpt {
+        color: #475569;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin: 0 0 24px 0;
+        flex-grow: 1;
+        text-align: justify;
+    }
+    .card-link {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: color 0.15s ease;
+        margin-top: auto;
+    }
+    .card-link svg {
+        transition: transform 0.15s ease;
+    }
+    .resource-card:hover .card-link {
+        color: #1d4ed8;
+    }
+    .resource-card:hover .card-link svg {
+        transform: translateX(4px);
+    }
+    
+    /* Adaptabilidad para pantallas medianas y móviles */
+    @media (max-width: 640px) {
+        .resources-section { padding: 50px 16px; }
+        .resources-header h2 { font-size: 1.75rem; }
+        .card-content { padding: 20px; }
+        .card-title { min-height: auto; }
+    }
+</style>
+
 
   <!-- PRECIOS -->
   <section id="precios">
