@@ -1,56 +1,49 @@
 <!DOCTYPE html>
 <html lang="es-CO">
 <head>
-  <!-- Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PM8R4LW8');</script>
 <!-- End Google Tag Manager -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>MetroSuite — Metrología, Datos Críticos y Generador de Formularios Dinámicos | Stracta</title>
 <meta name="description" content="MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos: valida, corrige y audita en tiempo real. Incluye un generador de formularios dinámicos y seguros por plantilla. Cumple ISO/IEC 17025 y CFR 21 Part 11. Soporte nativo en español para Colombia y LatAm.">
 <meta name="keywords" content="metrología empresarial, adquisición de datos críticos, generador de formularios dinámicos, calibración de balanzas, calibración de básculas camioneras, calibración dimensional, calibración de temperatura y presión, formularios dinámicos seguros, ISO 17025, validación en tiempo real, PaaS metrología, CFR 21 Part 11, software calidad Colombia, captura de datos en campo, checklist de mantenimiento, inspecciones técnicas digitales, alternativa a Google Forms para industria">
-<meta property="og:title" content="MetroSuite — Metrología, datos críticos y formularios dinámicos, validados en tiempo real">
-<meta property="og:description" content="Plataforma PaaS multitenant que valida, corrige y audita datos de metrología en tiempo real, con un generador de formularios dinámicos y seguros por plantilla. Workflows, agentes IA y cumplimiento ISO/IEC 17025.">
-<meta property="og:locale" content="es_CO">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://metrosuite.app/">
-<!-- SEO Básico -->
-<title>MetroSuite — Metrología, Datos Críticos y Software Industrial | Stracta</title>
-<meta name="description" content="Plataforma PaaS/SaaS industrial para adquisición de datos y cumplimiento normativo. Valida, corrige y audita cada dato en tiempo real bajo estándares ISO/IEC 17025 y CFR 21 Part 11.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://metrosuite.app">
+<link rel="canonical" href="https://metrosuite.app/">
 
-<!-- Open Graph para Redes Sociales y Enlaces (LinkedIn, WhatsApp) -->
+<!-- Open Graph para redes sociales (LinkedIn, WhatsApp) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="MetroSuite — Su próxima calibración, correcta antes de guardarse">
-<meta property="og:description" content="Proteja su acreditación en tiempo real. Validación de datos en el origen, motor de cálculos integrados, modo offline nativo e infraestructura inmutable en PostgreSQL.">
-<meta property="og:url" content="https://metrosuite.app">
+<meta property="og:description" content="Proteja su acreditación en tiempo real. Validación de datos en el origen, motor de cálculos integrado, modo offline nativo e infraestructura inmutable en PostgreSQL.">
+<meta property="og:url" content="https://metrosuite.app/">
 <meta property="og:site_name" content="MetroSuite">
 <meta property="og:locale" content="es_CO">
-<meta property="og:image" content="https://metrosuite.appassets/og-main-image.png">
+<meta property="og:image" content="https://metrosuite.app/assets/og-main-image.png">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MetroSuite — Adquisición de Datos Críticos y Metrología">
 <meta name="twitter:description" content="Elimina el riesgo operativo de las hojas de cálculo convencionales. Validación transaccional automatizada para entornos regulados e inspecciones de campo.">
-<meta name="twitter:image" content="https://metrosuite.appassets/og-main-image.png">
+<meta name="twitter:image" content="https://metrosuite.app/assets/og-main-image.png">
 
-<!-- Configuración de Geolocalización (Importante para LatAm B2B) -->
+<!-- Geolocalización (relevante para LatAm B2B) -->
 <meta name="geo.region" content="CO">
 <meta name="geo.placename" content="Colombia">
-  <meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="referrer" content="no-referrer-when-downgrade">
 <link rel="alternate" hreflang="es" href="https://metrosuite.app/">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314181C'/%3E%3Cpath d='M6 16h8M20 16h6M16 6v8M16 20v6' stroke='%232A5CDB' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
 <script type="application/ld+json">
 {
@@ -191,33 +184,90 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .mono{ font-family:var(--mono); }
 
-  /* ---------- header ---------- */
-  header{
-    position:sticky; top:0; z-index:100;
-    background:rgba(247,247,245,.92);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{ display:flex; align-items:center; justify-content:space-between; height:72px; gap:1rem; }
+  /* ---------- header (logo + botón CTA; el resto del header vive en el bloque de abajo) ---------- */
   .logo{ font-weight:700; font-size:1.15rem; color:var(--ink); text-decoration:none; letter-spacing:-0.01em; }
   .logo span{ color:var(--blue); }
-  .nav-links{ display:flex; gap:1.75rem; list-style:none; margin:0; padding:0; }
-  .nav-links a{ color:var(--ink-soft); text-decoration:none; font-size:.92rem; }
-  .nav-links a:hover{ color:var(--ink); }
   .nav-cta{
     background:var(--ink); color:#fff; text-decoration:none;
     padding:.6rem 1.1rem; font-size:.88rem; font-weight:500;
     border:1px solid var(--ink);
   }
   .nav-cta:hover{ background:var(--blue-deep); border-color:var(--blue-deep); }
-  .nav-toggle{ display:none; }
 
-  @media (max-width: 860px){
-    .nav-links{ display:none; }
-    .nav-toggle{
-      display:inline-flex; background:none; border:1px solid var(--line-strong);
-      padding:.5rem .7rem; font-family:var(--mono); font-size:.85rem;
-    }
+  /* ---------- header con menú desplegable ---------- */
+  .main-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-links a:hover { color: #2563eb; }
+
+  .dropdown { position: relative; padding: 8px 0; }
+  .chevron-icon { transition: transform 0.2s ease; color: #94a3b8; }
+  .dropdown:hover .chevron-icon { transform: rotate(180deg); color: #2563eb; }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+    padding: 8px 0;
+    min-width: 220px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.93rem;
+    color: #334155;
+    white-space: nowrap;
+  }
+  .dropdown-menu li a:hover { background-color: #f8fafc; color: #2563eb; }
+
+  @media (max-width: 900px) {
+    .nav-wrapper, .nav-cta { display: none; }
   }
 
   /* ---------- section scaffolding ---------- */
@@ -295,45 +345,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .step .step-num{ font-family:var(--mono); font-size:.8rem; color:var(--blue); display:block; margin-bottom:.6rem; }
   .step h3{ margin-bottom:.6rem; }
 
-  /* ---------- architecture ---------- */
-  .arch-stats{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3rem; }
-  @media (max-width:820px){ .arch-stats{ grid-template-columns:1fr; } }
-  .arch-stat{ background:var(--panel); padding:1.5rem 1.75rem; }
-  .arch-stat .badge-label{ font-family:var(--mono); font-size:.72rem; color:var(--ink-faint); margin-bottom:.6rem; }
-  .arch-stat strong{ display:block; font-size:1.05rem; font-weight:600; }
-
-  .arch-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3.5rem; }
-  @media (max-width:900px){ .arch-grid{ grid-template-columns:repeat(2,1fr); } }
-  .arch-card{ background:var(--panel); padding:1.75rem; }
-  .arch-card .badge-label{ font-family:var(--mono); font-size:.72rem; color:var(--blue); margin-bottom:.75rem; }
-  .arch-card p{ font-size:.92rem; }
-
+  /* ---------- datos en campo ---------- */
   .offline-note{
     display:grid; grid-template-columns:auto 1fr; gap:1.25rem; align-items:start;
-    padding:1.75rem; border:1px solid var(--line-strong); background:var(--panel); margin-bottom:4rem;
+    padding:1.75rem; border:1px solid var(--line-strong); background:var(--panel);
   }
   .offline-note .icon{ font-family:var(--mono); font-size:1.4rem; color:var(--ok); }
-
-  .origin-head{ margin-bottom:2rem; }
-  .origin-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); }
-  .origin{ background:var(--panel); padding:2rem; display:grid; grid-template-columns:220px 1fr; gap:2rem; }
-  @media (max-width:760px){ .origin{ grid-template-columns:1fr; gap:.75rem; } }
-  .origin h3{ margin-bottom:.35rem; }
-  .origin .tag{ font-family:var(--mono); font-size:.78rem; color:var(--tolerance); }
-  .origin p{ max-width:60ch; }
-
-  /* ---------- founder ---------- */
-  .founder{ display:grid; grid-template-columns:auto 1fr; gap:2.5rem; align-items:start; }
-  @media (max-width:700px){ .founder{ grid-template-columns:1fr; } }
-  .founder-mark{
-    width:96px; height:96px; border:1px solid var(--ink);
-    display:flex; align-items:center; justify-content:center;
-    font-family:var(--mono); font-weight:600; font-size:1.4rem;
-    color:var(--ink); flex-shrink:0;
-  }
-  .founder-name{ font-size:1.3rem; font-weight:700; margin-bottom:.2rem; }
-  .founder-role{ font-family:var(--mono); font-size:.82rem; color:var(--blue); margin-bottom:1rem; display:block; }
-  .founder-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.25rem; }
 
   /* ---------- features ---------- */
   .feat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
@@ -357,7 +374,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .cal-stat .num{ font-family:var(--mono); font-size:1.7rem; font-weight:600; color:var(--blue); display:block; }
   .cal-stat .lbl{ font-size:.82rem; color:var(--ink-soft); margin-top:.3rem; }
 
-  /* ---------- comparativa ---------- */
+  /* ---------- tablas comparativas (excel y campo) ---------- */
   .table-wrap{ overflow-x:auto; border:1px solid var(--line); }
   table{ width:100%; border-collapse:collapse; min-width:640px; }
   th,td{ text-align:left; padding:.9rem 1.1rem; font-size:.9rem; border-bottom:1px solid var(--line); }
@@ -366,14 +383,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   td.win{ color:var(--ok); font-weight:500; }
   tbody tr:last-child td, tbody tr:last-child th{ border-bottom:none; }
 
+  /* ---------- arquitectura + fundador (bloque fusionado) ---------- */
+  .arch-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:3.5rem; }
+  @media (max-width:900px){ .arch-grid{ grid-template-columns:repeat(2,1fr); } }
+  .arch-card{ background:var(--panel); padding:1.75rem; }
+  .arch-card .badge-label{ font-family:var(--mono); font-size:.72rem; color:var(--blue); margin-bottom:.75rem; }
+  .arch-card p{ font-size:.92rem; }
+
+  .origin-head{ margin-bottom:2rem; }
+  .origin-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line); }
+  .origin{ background:var(--panel); padding:2rem; display:grid; grid-template-columns:220px 1fr; gap:2rem; }
+  @media (max-width:760px){ .origin{ grid-template-columns:1fr; gap:.75rem; } }
+  .origin h3{ margin-bottom:.35rem; }
+  .origin .tag{ font-family:var(--mono); font-size:.78rem; color:var(--tolerance); }
+  .origin p{ max-width:60ch; }
+
+  .founder{ display:grid; grid-template-columns:auto 1fr; gap:2.5rem; align-items:start; }
+  @media (max-width:700px){ .founder{ grid-template-columns:1fr; } }
+  .founder-mark{
+    width:96px; height:96px; border:1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:600; font-size:1.4rem;
+    color:var(--ink); flex-shrink:0;
+  }
+  .founder-name{ font-size:1.3rem; font-weight:700; margin-bottom:.2rem; }
+  .founder-role{ font-family:var(--mono); font-size:.82rem; color:var(--blue); margin-bottom:1rem; display:block; }
+  .founder-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.25rem; }
+
   /* ---------- recursos ---------- */
-  .article-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; }
-  .article{ border-top:2px solid var(--line-strong); padding-top:1.1rem; }
-  .article a{ text-decoration:none; color:var(--ink); }
-  .article h3{ margin-bottom:.6rem; }
-  .article p{ font-size:.9rem; margin-bottom:.9rem; }
-  .article .read{ font-family:var(--mono); font-size:.8rem; color:var(--blue); }
+  .resources-section { padding: 5.5rem 0; border-bottom:1px solid var(--line); }
+  .resources-container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+  .resources-header { max-width: 44rem; margin-bottom: 3rem; }
+  .section-badge { display:none; } /* se sustituye visualmente por .kicker para mantener consistencia con el resto de la página */
+  .resources-header h2 { color: var(--ink); font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 700; line-height: 1.2; margin: 0 0 .75rem 0; }
+  .resources-header p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.6; margin: 0; max-width: 62ch; }
+  .resources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.75rem; }
+  .resource-card {
+    background: var(--panel); border: 1px solid var(--line);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .resource-card:hover { transform: translateY(-3px); box-shadow: 0 10px 18px -10px rgba(15,23,42,.15); border-color: var(--line-strong); }
+  .card-content { padding: 1.75rem; display: flex; flex-direction: column; flex-grow: 1; }
+  .card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.1rem; }
+  .card-badge { font-family: var(--mono); font-size: .72rem; font-weight: 500; padding: 3px 8px; text-transform: none; }
+  .badge-regulatory { background-color: #eff6ff; color: #2563eb; }
+  .badge-infrastructure { background-color: #ecfdf5; color: #059669; }
+  .badge-hardware { background-color: #fef2f2; color: #dc2626; }
+  .badge-field { background-color: var(--bg); color: var(--ink-soft); border: 1px solid var(--line); }
+  .read-time { font-family: var(--mono); font-size: .78rem; color: var(--ink-faint); }
+  .card-title { color: var(--ink); font-size: 1.1rem; font-weight: 600; line-height: 1.35; margin: 0 0 .7rem 0; }
+  .card-excerpt { color: var(--ink-soft); font-size: .92rem; line-height: 1.6; margin: 0 0 1.4rem 0; flex-grow: 1; }
+  .card-link { color: var(--blue); text-decoration: none; font-weight: 500; font-size: .88rem; display: inline-flex; align-items: center; gap: 6px; transition: color .15s ease; margin-top: auto; }
+  .card-link svg { transition: transform .15s ease; }
+  .resource-card:hover .card-link svg { transform: translateX(4px); }
   .resources-more{ margin-top:2.5rem; }
+  @media (max-width: 640px){ .card-title{ min-height:auto; } }
 
   /* ---------- precios ---------- */
   .price-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
@@ -420,39 +485,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM8R4LW8"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<!-- ======================================================== -->
-<!-- HEADER OPTIMIZADO Y DESATURADO - METROSUITE              -->
-<!-- ======================================================== -->
 <header class="main-header">
   <div class="wrap nav-container">
-    
-    <!-- Logotipo -->
     <a class="logo" href="#top">Metro<span>Suite</span></a>
-    
-    <!-- Navegación Principal Reducida -->
+
     <nav class="nav-wrapper">
       <ul class="nav-links">
-        
-        <!-- Dropdown: Consolida 5 enlaces viejos en 1 solo menú técnico -->
         <li class="dropdown">
           <a href="#plataforma" class="dropdown-toggle">
-            Producto 
+            Producto
             <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
           </a>
           <ul class="dropdown-menu">
             <li><a href="#plataforma">La Plataforma</a></li>
-            <li><a href="#arquitectura">Arquitectura Enterprise</a></li>
+            <li><a href="#campo">Inspecciones en Campo</a></li>
             <li><a href="#funcionalidades">Funcionalidades Clave</a></li>
             <li><a href="#calibraciones">Módulos de Calibración</a></li>
-            <li><a href="#campo">Inspecciones en Campo</a></li>
+            <li><a href="#arquitectura">Arquitectura Enterprise</a></li>
           </ul>
         </li>
 
         <li><a href="#comparativa">Excel vs MetroSuite</a></li>
-        
-        <!-- Recursos consolida también la sección de Preguntas si es necesario -->
+
         <li class="dropdown">
           <a href="#recursos" class="dropdown-toggle">
             Recursos
@@ -468,120 +525,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </nav>
 
-    <!-- Botón de Acción Principal -->
     <a class="nav-cta" href="#contacto">Solicitar demo</a>
-    
   </div>
 </header>
 
-<!-- ======================================================== -->
-<!-- ESTILOS CSS REFINADOS PARA EL HEADER                     -->
-<!-- ======================================================== -->
-<style>
-  /* Contenedores Base */
-  .main-header {
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Estilos de Enlaces */
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px; /* Espaciado elegante entre ítems */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-links a {
-    color: #475569;
-    text-decoration: none;
-    font-size: 0.98rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .nav-links a:hover {
-    color: #2563eb; /* Tu color azul de marca */
-  }
-
-  /* Estructura del Dropdown Desplegable */
-  .dropdown {
-    position: relative;
-    padding: 8px 0;
-  }
-  .chevron-icon {
-    transition: transform 0.2s ease;
-    color: #94a3b8;
-  }
-  .dropdown:hover .chevron-icon {
-    transform: rotate(180deg);
-    color: #2563eb;
-  }
-  
-  /* Menú Flotante Oculto */
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
-    padding: 8px 0;
-    min-width: 220px;
-    list-style: none;
-    margin: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  }
-  .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-  }
-  
-  /* Elementos internos del Dropdown */
-  .dropdown-menu li a {
-    display: block;
-    padding: 10px 20px;
-    font-size: 0.93rem;
-    color: #334155;
-    white-space: nowrap;
-  }
-  .dropdown-menu li a:hover {
-    background-color: #f8fafc;
-    color: #2563eb;
-  }
-
-  /* Adaptabilidad Móvil Básica */
-  @media (max-width: 900px) {
-    .nav-wrapper, .nav-cta {
-      display: none; /* Aquí puedes integrar tu menú hamburguesa móvil en el futuro */
-    }
-  }
-</style>
-
-
 <main id="contenido">
 
-  <!-- HERO -->
+  <!-- BLOQUE 1: HERO -->
   <section class="hero" id="top">
     <div class="wrap hero-inner">
       <div class="hero-grid">
@@ -619,7 +569,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- PROBLEMA / TENSIÓN / SOLUCIÓN -->
+  <!-- BLOQUE 2: EL DOLOR Y LA SOLUCIÓN -->
   <section id="plataforma">
     <div class="wrap">
       <div class="section-head">
@@ -646,206 +596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- ARQUITECTURA Y SEGURIDAD -->
-  <section id="arquitectura">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">arquitectura y seguridad</div>
-        <h2>Construida como infraestructura, no como una hoja de cálculo con esteroides.</h2>
-      </div>
-
-      <div class="arch-grid">
-        <div class="arch-card">
-          <div class="badge-label">arquitectura</div>
-          <p>Principios SOLID, microservicios y bases de datos de nivel empresarial (PostgreSQL).</p>
-        </div>
-        <div class="arch-card">
-          <div class="badge-label">seguridad</div>
-          <p>Multitenant con aislamiento total de datos por tenant; cifrado en tránsito y en reposo.</p>
-        </div>
-        <div class="arch-card">
-          <div class="badge-label">disponibilidad</div>
-          <p>Front con modo offline para campo o entornos remotos; despliegue on-premise o en la nube.</p>
-        </div>
-        <div class="arch-card">
-          <div class="badge-label">auditoría y cumplimiento</div>
-          <p>Trazabilidad completa, registros inmutables y soporte para ISO/IEC 17025 y CFR 21 Part 11.</p>
-        </div>
-      </div>
-
-      <div class="offline-note">
-        <span class="icon">↕</span>
-        <div>
-          <h3>La información no se pierde aunque falle la conexión</h3>
-          <p>MetroSuite sincroniza automáticamente en cuanto el equipo vuelve a estar en línea, sin duplicar ni perder registros — pensado para laboratorios, plantas y trabajo de campo con conectividad intermitente.</p>
-        </div>
-      </div>
-
-      <div class="origin-head">
-        <div class="kicker">por qué está construido así</div>
-        <h2>Cada decisión técnica viene de un problema que ya vivimos.</h2>
-      </div>
-
-      <div class="origin-list">
-        <div class="origin">
-          <div>
-            <h3>Modo Offline</h3>
-            <span class="tag">5 años en logística de alta disponibilidad</span>
-          </div>
-          <p>Pasamos media década diseñando sistemas de alta disponibilidad para cadenas de suministro y operaciones en bodegas con conectividad intermitente. Esa misma arquitectura logística la transferimos a MetroSuite: un front-end con sincronización automatizada y tolerancia a fallos que permite a tus técnicos calibrar en plantas sin señal sin perder un solo registro.</p>
-        </div>
-        <div class="origin">
-          <div>
-            <h3>Motor de cálculos y validación</h3>
-            <span class="tag">5 años en metrología aplicada</span>
-          </div>
-          <p>Sabemos que un error de digitación o una celda rota en Excel cuesta meses de reprocesos o el rechazo de un lote. Aplicamos cinco años de experiencia en automatización de incertidumbre de medición para crear un motor síncrono que calcula tolerancias y valida el dato antes de guardarse en la base de datos.</p>
-        </div>
-        <div class="origin">
-          <div>
-            <h3>Trazabilidad inmutable</h3>
-            <span class="tag">ISO 17025 · CFR 21 Part 11</span>
-          </div>
-          <p>Entendemos el peso de la responsabilidad legal de un laboratorio. Diseñamos la infraestructura bajo el estándar de segregación de datos y registros inmutables (audit trail) con el que operan los sectores más estrictos, garantizando que tu información sea transparente y 100% certificable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FUNDADOR -->
-  <section id="fundador">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">quién construyó metrosuite</div>
-        <h2>Veinte años de software empresarial, aplicados a un problema que se vive en planta.</h2>
-      </div>
-      <div class="founder">
-        <div class="founder-mark" aria-hidden="true">DB</div>
-        <div>
-          <div class="founder-name">Diego Beltrán</div>
-          <span class="founder-role">Fundador, Stracta</span>
-          <p>Más de 20 años desarrollando plataformas empresariales sobre .NET, combinados con 5 años de experiencia en logística de alta disponibilidad y 5 años en metrología aplicada. MetroSuite es el resultado de aplicar esa arquitectura de misión crítica a los datos que ningún laboratorio puede permitirse perder.</p>
-          <div class="founder-tags">
-            <span class="pill">+20 años en plataformas .NET</span>
-            <span class="pill">5 años en logística</span>
-            <span class="pill">5 años en metrología</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FUNCIONALIDADES -->
-  <section id="funcionalidades">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">funcionalidades clave</div>
-        <h2>Todo lo necesario para operar datos de misión crítica.</h2>
-      </div>
-      <div class="feat-grid">
-        <div class="feat">
-          <h3>Motor de validación</h3>
-          <p>Revisa cada entrada contra lo esperado, emite alertas y aplica autocorrecciones configurables antes de guardar el dato.</p>
-        </div>
-        <div class="feat">
-          <h3>Motor de cálculos</h3>
-          <p>Cada campo se programa: fórmulas, consultas a servicios externos y cálculos en tiempo real para incertidumbre y tolerancias.</p>
-        </div>
-        <div class="feat">
-          <h3>Plantillas reutilizables</h3>
-          <p>Cree una plantilla de equipo, patrón u orden una sola vez y reutilícela en toda la operación, con formularios dinámicos y seguros por plantilla.</p>
-        </div>
-        <div class="feat">
-          <h3>Workflows y agentes IA</h3>
-          <p>Orquestación de tareas con Elsa, programaciones automáticas y agentes de IA locales o en la nube.</p>
-        </div>
-        <div class="feat">
-          <h3>Configuración sin código</h3>
-          <p>Más de 50 calibraciones predefinidas. Una calibración nueva solo requiere ajustes de configuración, no desarrollo.</p>
-        </div>
-        <div class="feat">
-          <h3>Interfaz 100% en español</h3>
-          <p>No es una traducción automática: toda la plataforma, el soporte y el onboarding están pensados nativamente en español para equipos de LatAm.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CALIBRACIONES -->
-  <section id="calibraciones">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">calibraciones ya configuradas</div>
-        <h2>Más de 50 calibraciones predefinidas, en cuatro familias.</h2>
-        <p style="margin-top:.75rem;">Y prácticamente cualquier otra calibración se puede configurar sin desarrollo adicional.</p>
-      </div>
-
-      <div class="fam-grid">
-        <div class="fam">
-          <h3>Pesaje y fuerza</h3>
-          <ul>
-            <li>Balanzas</li><li>Básculas</li><li>Básculas camioneras</li><li>Tuercas</li><li>Medidores de fuerza</li>
-          </ul>
-        </div>
-        <div class="fam">
-          <h3>Termofísica y fluidos</h3>
-          <ul>
-            <li>Temperatura</li><li>Presión</li><li>Humedad</li><li>Infrarrojo</li>
-          </ul>
-        </div>
-        <div class="fam">
-          <h3>Dimensional y geometría</h3>
-          <ul>
-            <li>Dimensional</li><li>Patrones de longitud</li><li>Calibradores de radio</li><li>Bloques patrón</li><li>Tampones lisos</li><li>Tampones roscados</li><li>Anillos/tampones roscados</li><li>Alambres para roscas</li>
-          </ul>
-        </div>
-        <div class="fam">
-          <h3>Óptica y superficies</h3>
-          <ul>
-            <li>Mármoles de inspección</li><li>Micrómetros de banco</li><li>Microscopios</li><li>Comparador óptico</li><li>Retículas</li><li>Micrómetros láser</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cal-stats">
-        <div class="cal-stat"><span class="num">50+</span><span class="lbl">calibraciones predefinidas listas para usar</span></div>
-        <div class="cal-stat"><span class="num">100%</span><span class="lbl">aislamiento de datos por tenant</span></div>
-        <div class="cal-stat"><span class="num">ES</span><span class="lbl">interfaz nativa en español, no traducida</span></div>
-        <div class="cal-stat"><span class="num">↕</span><span class="lbl">nube, on-premise o sin conexión</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPARATIVA -->
-  <section id="comparativa">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">comparativa</div>
-        <h2>Excel puede guardar un dato. No puede protegerlo.</h2>
-        <p style="margin-top:.75rem;">Una hoja de cálculo registra lo que se escribe en ella. MetroSuite revisa lo que se escribe antes de guardarlo.</p>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th></th><th>Excel / hojas de cálculo</th><th>MetroSuite</th></tr>
-          </thead>
-          <tbody>
-            <tr><th>Validación de cada dato</th><td>Se descubre en revisión manual</td><td class="win">Antes de guardar el dato</td></tr>
-            <tr><th>Cálculos y fórmulas</th><td>Manuales, se rompen al copiar celdas</td><td class="win">Configurables por campo, no se rompen</td></tr>
-            <tr><th>Trazabilidad y auditoría</th><td>Historial manual o inexistente</td><td class="win">Registros completos e inmutables</td></tr>
-            <tr><th>Control de acceso</th><td>Un archivo, sin aislamiento real</td><td class="win">Multitenant con aislamiento total</td></tr>
-            <tr><th>Trabajo sin conexión</th><td>Depende de dónde esté guardado</td><td class="win">Modo offline con sincronización automática</td></tr>
-            <tr><th>Plantillas de calibración</th><td>Se arman desde cero cada vez</td><td class="win">50+ predefinidas, más las que configure</td></tr>
-            <tr><th>Cumplimiento normativo</th><td>No es certificable por diseño</td><td class="win">Construida para ISO/IEC 17025 y CFR 21 Part 11</td></tr>
-            <tr><th>Costo de un error</th><td>Se paga en la auditoría</td><td class="win">Se corrige antes de guardar el dato</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- DATOS EN CAMPO -->
+  <!-- BLOQUE 3: FLEXIBILIDAD DEL PRODUCTO (NUEVOS NICHOS) -->
   <section id="campo">
     <div class="wrap">
       <div class="section-head">
@@ -892,229 +643,277 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- RECURSOS / BLOG -->
-<!-- ======================================================== -->
-<!-- SECCIÓN DE RECURSOS TÉCNICOS Y BLOG - METROSUITE         -->
-<!-- ======================================================== -->
-<section class="resources-section">
-    <div class="resources-container">
-        
-        <!-- Encabezado de la Sección -->
-        <div class="resources-header">
-            <span class="section-badge">Centro de Conocimiento</span>
-            <h2>Recursos Técnicos e Ingeniería de Datos</h2>
-            <p>Análisis detallados sobre cumplimiento regulatorio, arquitecturas de software industrial e integridad del dato en entornos de misión crítica.</p>
+  <!-- BLOQUE 4: CAPACIDADES TÉCNICAS (FUNCIONALIDADES + CALIBRACIONES) -->
+  <section id="funcionalidades">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">funcionalidades clave</div>
+        <h2>Todo lo necesario para operar datos de misión crítica.</h2>
+      </div>
+      <div class="feat-grid">
+        <div class="feat">
+          <h3>Motor de validación</h3>
+          <p>Revisa cada entrada contra lo esperado, emite alertas y aplica autocorrecciones configurables antes de guardar el dato.</p>
         </div>
-
-        <!-- Grilla de Tarjetas (UI Cards Grid) -->
-        <div class="resources-grid">
-
-            <!-- Tarjeta 1: CFR 21 Part 11 -->
-            <article class="resource-card">
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span class="card-badge badge-regulatory">Cumplimiento</span>
-                        <span class="read-time">5 min de lectura</span>
-                    </div>
-                    <h3 class="card-title">Cómo prepararse para una auditoría CFR 21 Part 11 sin usar Excel</h3>
-                    <p class="card-excerpt">Un análisis técnico sobre por qué las hojas de cálculo tradicionales violan los pilares de integridad, auditoría e inmutabilidad exigidos por la FDA, y cómo estructurar una migración segura.</p>
-                    <a href="/cfr21-part11-excel.html" class="card-link">
-                        Leer artículo técnico
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Tarjeta 2: ISO 17025 -->
-            <article class="resource-card">
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span class="card-badge badge-infrastructure">Infraestructura</span>
-                        <span class="read-time">6 min de lectura</span>
-                    </div>
-                    <h3 class="card-title">Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025</h3>
-                    <p class="card-excerpt">Evaluación de las arquitecturas estructuradas bajo patrones 'Append-Only' en motores relacionales y cómo blindan la trazabilidad física de los laboratorios ante auditorías de acreditación.</p>
-                    <a href="/iso17025-bases-datos-inmutables.html" class="card-link">
-                        Leer artículo técnico
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Tarjeta 3: Conexión Serial -->
-            <article class="resource-card">
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span class="card-badge badge-hardware">Integración</span>
-                        <span class="read-time">5 min de lectura</span>
-                    </div>
-                    <h3 class="card-title">Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales</h3>
-                    <p class="card-excerpt">Guía de implementación técnica utilizando la API Web Serial nativa del navegador para capturar lecturas inmutables de básculas RS-232 y RS-485 sin instalar software local pesado.</p>
-                    <a href="/conectar-balanzas-industriales-web.html" class="card-link">
-                        Leer artículo técnico
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Tarjeta 4: Google Forms / Campo -->
-            <article class="resource-card">
-                <div class="card-content">
-                    <div class="card-meta">
-                        <span class="card-badge badge-field">Procesos</span>
-                        <span class="read-time">6 min de lectura</span>
-                    </div>
-                    <h3 class="card-title">De Google Forms a datos autovalidados: Análisis de controles en checklists</h3>
-                    <p class="card-excerpt">Evaluación de los vectores de riesgo operativo al usar formularios HTTP convencionales en el piso de planta y cómo diseñar sistemas robustos con persistencia local y validación offline.</p>
-                    <a href="/google-forms-datos-validados.html" class="card-link">
-                        Leer artículo técnico
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-
+        <div class="feat">
+          <h3>Motor de cálculos</h3>
+          <p>Cada campo se programa: fórmulas, consultas a servicios externos y cálculos en tiempo real para incertidumbre y tolerancias.</p>
         </div>
+        <div class="feat">
+          <h3>Plantillas reutilizables</h3>
+          <p>Cree una plantilla de equipo, patrón u orden una sola vez y reutilícela en toda la operación, con formularios dinámicos y seguros por plantilla.</p>
+        </div>
+        <div class="feat">
+          <h3>Workflows y agentes IA</h3>
+          <p>Orquestación de tareas con Elsa, programaciones automáticas y agentes de IA locales o en la nube.</p>
+        </div>
+        <div class="feat">
+          <h3>Configuración sin código</h3>
+          <p>Más de 50 calibraciones predefinidas. Una calibración nueva solo requiere ajustes de configuración, no desarrollo.</p>
+        </div>
+        <div class="feat">
+          <h3>Interfaz 100% en español</h3>
+          <p>No es una traducción automática: toda la plataforma, el soporte y el onboarding están pensados nativamente en español para equipos de LatAm.</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ======================================================== -->
-<!-- ESTILOS CSS COMPATIBLES Y RESPONSIVOS                    -->
-<!-- ======================================================== -->
-<style>
-    .resources-section {
-        padding: 80px 20px;
-        background-color: #f8fafc; /* Color de fondo limpio e industrial */
-    }
-    .resources-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .resources-header {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 50px;
-    }
-    .section-badge {
-        display: inline-block;
-        background-color: #e2e8f0;
-        color: #475569;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 16px;
-    }
-    .resources-header h2 {
-        color: #0f172a;
-        font-size: 2.25rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0 0 16px 0;
-    }
-    .resources-header p {
-        color: #64748b;
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin: 0;
-    }
-    .resources-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 30px;
-    }
-    .resource-card {
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-    }
-    .resource-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.08);
-        border-color: #cbd5e1;
-    }
-    .card-content {
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-    .card-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .card-badge {
-        font-size: 0.78rem;
-        font-weight: 600;
-        padding: 4px 8px;
-        border-radius: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
-    }
-    .badge-regulatory { background-color: #eff6ff; color: #2563eb; }
-    .badge-infrastructure { background-color: #ecfdf5; color: #059669; }
-    .badge-hardware { background-color: #fef2f2; color: #dc2626; }
-    .badge-field { background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
-    
-    .read-time {
-        font-size: 0.85rem;
-        color: #94a3b8;
-    }
-    .card-title {
-        color: #0f172a;
-        font-size: 1.25rem;
-        font-weight: 600;
-        line-height: 1.4;
-        margin: 0 0 12px 0;
-        min-height: 56px; /* Mantiene la alineación visual si los títulos varían en líneas */
-    }
-    .card-excerpt {
-        color: #475569;
-        font-size: 0.98rem;
-        line-height: 1.6;
-        margin: 0 0 24px 0;
-        flex-grow: 1;
-        text-align: justify;
-    }
-    .card-link {
-        color: #2563eb;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: color 0.15s ease;
-        margin-top: auto;
-    }
-    .card-link svg {
-        transition: transform 0.15s ease;
-    }
-    .resource-card:hover .card-link {
-        color: #1d4ed8;
-    }
-    .resource-card:hover .card-link svg {
-        transform: translateX(4px);
-    }
-    
-    /* Adaptabilidad para pantallas medianas y móviles */
-    @media (max-width: 640px) {
-        .resources-section { padding: 50px 16px; }
-        .resources-header h2 { font-size: 1.75rem; }
-        .card-content { padding: 20px; }
-        .card-title { min-height: auto; }
-    }
-</style>
+  <section id="calibraciones">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">calibraciones ya configuradas</div>
+        <h2>Más de 50 calibraciones predefinidas, en cuatro familias.</h2>
+        <p style="margin-top:.75rem;">Y prácticamente cualquier otra calibración se puede configurar sin desarrollo adicional.</p>
+      </div>
 
+      <div class="fam-grid">
+        <div class="fam">
+          <h3>Pesaje y fuerza</h3>
+          <ul>
+            <li>Balanzas</li><li>Básculas</li><li>Básculas camioneras</li><li>Tuercas</li><li>Medidores de fuerza</li>
+          </ul>
+        </div>
+        <div class="fam">
+          <h3>Termofísica y fluidos</h3>
+          <ul>
+            <li>Temperatura</li><li>Presión</li><li>Humedad</li><li>Infrarrojo</li>
+          </ul>
+        </div>
+        <div class="fam">
+          <h3>Dimensional y geometría</h3>
+          <ul>
+            <li>Dimensional</li><li>Patrones de longitud</li><li>Calibradores de radio</li><li>Bloques patrón</li><li>Tampones lisos</li><li>Tampones roscados</li><li>Anillos/tampones roscados</li><li>Alambres para roscas</li>
+          </ul>
+        </div>
+        <div class="fam">
+          <h3>Óptica y superficies</h3>
+          <ul>
+            <li>Mármoles de inspección</li><li>Micrómetros de banco</li><li>Microscopios</li><li>Comparador óptico</li><li>Retículas</li><li>Micrómetros láser</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- PRECIOS -->
+      <div class="cal-stats">
+        <div class="cal-stat"><span class="num">50+</span><span class="lbl">calibraciones predefinidas listas para usar</span></div>
+        <div class="cal-stat"><span class="num">100%</span><span class="lbl">aislamiento de datos por tenant</span></div>
+        <div class="cal-stat"><span class="num">ES</span><span class="lbl">interfaz nativa en español, no traducida</span></div>
+        <div class="cal-stat"><span class="num">↕</span><span class="lbl">nube, on-premise o sin conexión</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 5: VALIDACIÓN CIENTÍFICA (EXCEL VS METROSUITE) -->
+  <section id="comparativa">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">comparativa</div>
+        <h2>Excel puede guardar un dato. No puede protegerlo.</h2>
+        <p style="margin-top:.75rem;">Una hoja de cálculo registra lo que se escribe en ella. MetroSuite revisa lo que se escribe antes de guardarlo.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th></th><th>Excel / hojas de cálculo</th><th>MetroSuite</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Validación de cada dato</th><td>Se descubre en revisión manual</td><td class="win">Antes de guardar el dato</td></tr>
+            <tr><th>Cálculos y fórmulas</th><td>Manuales, se rompen al copiar celdas</td><td class="win">Configurables por campo, no se rompen</td></tr>
+            <tr><th>Trazabilidad y auditoría</th><td>Historial manual o inexistente</td><td class="win">Registros completos e inmutables</td></tr>
+            <tr><th>Control de acceso</th><td>Un archivo, sin aislamiento real</td><td class="win">Multitenant con aislamiento total</td></tr>
+            <tr><th>Trabajo sin conexión</th><td>Depende de dónde esté guardado</td><td class="win">Modo offline con sincronización automática</td></tr>
+            <tr><th>Plantillas de calibración</th><td>Se arman desde cero cada vez</td><td class="win">50+ predefinidas, más las que configure</td></tr>
+            <tr><th>Cumplimiento normativo</th><td>No es certificable por diseño</td><td class="win">Construida para ISO/IEC 17025 y CFR 21 Part 11</td></tr>
+            <tr><th>Costo de un error</th><td>Se paga en la auditoría</td><td class="win">Se corrige antes de guardar el dato</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 6: RESPALDO DE INGENIERÍA E INFRAESTRUCTURA (arquitectura + origen + fundador, fusionados) -->
+  <section id="arquitectura">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">arquitectura y seguridad</div>
+        <h2>Construida como infraestructura, no como una hoja de cálculo con esteroides.</h2>
+      </div>
+
+      <div class="arch-grid">
+        <div class="arch-card">
+          <div class="badge-label">arquitectura</div>
+          <p>Principios SOLID, microservicios y bases de datos de nivel empresarial (PostgreSQL).</p>
+        </div>
+        <div class="arch-card">
+          <div class="badge-label">seguridad</div>
+          <p>Multitenant con aislamiento total de datos por tenant; cifrado en tránsito y en reposo.</p>
+        </div>
+        <div class="arch-card">
+          <div class="badge-label">disponibilidad</div>
+          <p>Front con modo offline para campo o entornos remotos; despliegue on-premise o en la nube.</p>
+        </div>
+        <div class="arch-card">
+          <div class="badge-label">auditoría y cumplimiento</div>
+          <p>Trazabilidad completa, registros inmutables y soporte para ISO/IEC 17025 y CFR 21 Part 11.</p>
+        </div>
+      </div>
+
+      <div class="offline-note" style="margin-bottom:4rem;">
+        <span class="icon">↕</span>
+        <div>
+          <h3>La información no se pierde aunque falle la conexión</h3>
+          <p>MetroSuite sincroniza automáticamente en cuanto el equipo vuelve a estar en línea, sin duplicar ni perder registros — pensado para laboratorios, plantas y trabajo de campo con conectividad intermitente.</p>
+        </div>
+      </div>
+
+      <div class="origin-head">
+        <div class="kicker">por qué está construido así</div>
+        <h2>Cada decisión técnica viene de un problema que ya vivimos.</h2>
+      </div>
+
+      <div class="origin-list">
+        <div class="origin">
+          <div>
+            <h3>Modo Offline</h3>
+            <span class="tag">5 años en logística de alta disponibilidad</span>
+          </div>
+          <p>Pasamos media década diseñando sistemas de alta disponibilidad para cadenas de suministro y operaciones en bodegas con conectividad intermitente. Esa misma arquitectura logística la transferimos a MetroSuite: un front-end con sincronización automatizada y tolerancia a fallos que permite a tus técnicos calibrar en plantas sin señal sin perder un solo registro.</p>
+        </div>
+        <div class="origin">
+          <div>
+            <h3>Motor de cálculos y validación</h3>
+            <span class="tag">5 años en metrología aplicada</span>
+          </div>
+          <p>Sabemos que un error de digitación o una celda rota en Excel cuesta meses de reprocesos o el rechazo de un lote. Aplicamos cinco años de experiencia en automatización de incertidumbre de medición para crear un motor síncrono que calcula tolerancias y valida el dato antes de guardarse en la base de datos.</p>
+        </div>
+        <div class="origin">
+          <div>
+            <h3>Trazabilidad inmutable</h3>
+            <span class="tag">ISO 17025 · CFR 21 Part 11</span>
+          </div>
+          <p>Entendemos el peso de la responsabilidad legal de un laboratorio. Diseñamos la infraestructura bajo el estándar de segregación de datos y registros inmutables (audit trail) con el que operan los sectores más estrictos, garantizando que tu información sea transparente y 100% certificable.</p>
+        </div>
+      </div>
+
+      <div id="fundador" class="origin-head" style="margin-top:4rem;">
+        <div class="kicker">quién construyó metrosuite</div>
+        <h2>Veinte años de software empresarial, aplicados a un problema que se vive en planta.</h2>
+      </div>
+      <div class="founder">
+        <div class="founder-mark" aria-hidden="true">DB</div>
+        <div>
+          <div class="founder-name">Diego Beltrán</div>
+          <span class="founder-role">Fundador, Stracta</span>
+          <p>Más de 20 años desarrollando plataformas empresariales sobre .NET, combinados con 5 años de experiencia en logística de alta disponibilidad y 5 años en metrología aplicada. MetroSuite es el resultado de aplicar esa arquitectura de misión crítica a los datos que ningún laboratorio puede permitirse perder.</p>
+          <div class="founder-tags">
+            <span class="pill">+20 años en plataformas .NET</span>
+            <span class="pill">5 años en logística</span>
+            <span class="pill">5 años en metrología</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 7: CENTRO DE CONOCIMIENTO (RECURSOS) -->
+  <section class="resources-section" id="recursos">
+    <div class="resources-container">
+      <div class="resources-header">
+        <div class="kicker">centro de conocimiento</div>
+        <h2>Recursos técnicos e ingeniería de datos</h2>
+        <p style="margin-top:.75rem;">Análisis detallados sobre cumplimiento regulatorio, arquitecturas de software industrial e integridad del dato en entornos de misión crítica.</p>
+      </div>
+
+      <div class="resources-grid">
+
+        <article class="resource-card">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-regulatory">Cumplimiento</span>
+              <span class="read-time">5 min de lectura</span>
+            </div>
+            <h3 class="card-title">Cómo prepararse para una auditoría CFR 21 Part 11 sin usar Excel</h3>
+            <p class="card-excerpt">Un análisis técnico sobre por qué las hojas de cálculo tradicionales violan los pilares de integridad, auditoría e inmutabilidad exigidos por la FDA, y cómo estructurar una migración segura.</p>
+            <a href="/cfr21-part11-excel.html" class="card-link">
+              Leer artículo técnico
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-infrastructure">Infraestructura</span>
+              <span class="read-time">6 min de lectura</span>
+            </div>
+            <h3 class="card-title">Ventajas de las bases de datos inmutables en la norma ISO/IEC 17025</h3>
+            <p class="card-excerpt">Evaluación de las arquitecturas estructuradas bajo patrones 'Append-Only' en motores relacionales y cómo blindan la trazabilidad física de los laboratorios ante auditorías de acreditación.</p>
+            <a href="/iso17025-bases-datos-inmutables.html" class="card-link">
+              Leer artículo técnico
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-hardware">Integración</span>
+              <span class="read-time">5 min de lectura</span>
+            </div>
+            <h3 class="card-title">Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales</h3>
+            <p class="card-excerpt">Guía de implementación técnica utilizando la API Web Serial nativa del navegador para capturar lecturas inmutables de básculas RS-232 y RS-485 sin instalar software local pesado.</p>
+            <a href="/conectar-balanzas-industriales-web.html" class="card-link">
+              Leer artículo técnico
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-field">Procesos</span>
+              <span class="read-time">5 min de lectura</span>
+            </div>
+            <h3 class="card-title">De Google Forms a datos autovalidados: análisis de controles en checklists</h3>
+            <p class="card-excerpt">Evaluación de los vectores de riesgo operativo al usar formularios HTTP convencionales en el piso de planta y cómo diseñar sistemas robustos con persistencia local y validación offline.</p>
+            <a href="/google-forms-datos-validados.html" class="card-link">
+              Leer artículo técnico
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="resources-more"><a href="#">Ver todos los artículos →</a></p>
+    </div>
+  </section>
+
+  <!-- BLOQUE 8: CIERRE COMERCIAL (PRECIOS, FAQ, CONTACTO) -->
   <section id="precios">
     <div class="wrap">
       <div class="section-head">
@@ -1150,7 +949,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section id="preguntas">
     <div class="wrap">
       <div class="section-head">
@@ -1172,16 +970,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p>El retorno se mide en menos reprocesos, menos horas corrigiendo hojas de cálculo y una acreditación protegida frente a un solo dato mal capturado.</p>
         </details>
         <details class="faq-item">
+          <summary>Solo necesito un checklist simple, no una acreditación</summary>
+          <p>MetroSuite parte de la misma plantilla simple que usaría en Google Forms o Jotform, pero con cálculos y validación desde el primer campo. Cuando su operación lo requiera, esa misma información ya está lista para una auditoría, sin migrar de herramienta.</p>
+        </details>
+        <details class="faq-item">
           <summary>No confiamos en proveedores extranjeros</summary>
           <p>Stracta ofrece soporte local en español, con respaldo y estándares internacionales.</p>
         </details>
         <details class="faq-item">
           <summary>Dependemos de la conexión a internet</summary>
           <p>El front funciona en modo offline, con sincronización automática, redundancia y copias de respaldo cifradas.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Solo necesito un checklist simple, no una acreditación</summary>
-          <p>MetroSuite parte de la misma plantilla simple que usaría en Google Forms o Jotform, pero con cálculos y validación desde el primer campo. Cuando su operación lo requiera, esa misma información ya está lista para una auditoría, sin migrar de herramienta.</p>
         </details>
         <details class="faq-item">
           <summary>Nos preocupa migrar los datos</summary>
@@ -1191,7 +989,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- CONTACTO -->
   <section class="final-cta" id="contacto">
     <div class="wrap">
       <div>
