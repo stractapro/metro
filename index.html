@@ -422,23 +422,162 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<header>
-  <div class="wrap nav">
+<!-- ======================================================== -->
+<!-- HEADER OPTIMIZADO Y DESATURADO - METROSUITE              -->
+<!-- ======================================================== -->
+<header class="main-header">
+  <div class="wrap nav-container">
+    
+    <!-- Logotipo -->
     <a class="logo" href="#top">Metro<span>Suite</span></a>
-    <ul class="nav-links">
-      <li><a href="#plataforma">Plataforma</a></li>
-      <li><a href="#arquitectura">Arquitectura</a></li>
-      <li><a href="#funcionalidades">Funcionalidades</a></li>
-      <li><a href="#calibraciones">Calibraciones</a></li>
-      <li><a href="#comparativa">Comparativa</a></li>
-      <li><a href="#campo">Datos en campo</a></li>
-      <li><a href="#recursos">Recursos</a></li>
-      <li><a href="#precios">Precios</a></li>
-      <li><a href="#preguntas">Preguntas</a></li>
-    </ul>
+    
+    <!-- Navegación Principal Reducida -->
+    <nav class="nav-wrapper">
+      <ul class="nav-links">
+        
+        <!-- Dropdown: Consolida 5 enlaces viejos en 1 solo menú técnico -->
+        <li class="dropdown">
+          <a href="#plataforma" class="dropdown-toggle">
+            Producto 
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#plataforma">La Plataforma</a></li>
+            <li><a href="#arquitectura">Arquitectura Enterprise</a></li>
+            <li><a href="#funcionalidades">Funcionalidades Clave</a></li>
+            <li><a href="#calibraciones">Módulos de Calibración</a></li>
+            <li><a href="#campo">Inspecciones en Campo</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#comparativa">Excel vs MetroSuite</a></li>
+        
+        <!-- Recursos consolida también la sección de Preguntas si es necesario -->
+        <li class="dropdown">
+          <a href="#recursos" class="dropdown-toggle">
+            Recursos
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#recursos">Artículos Técnicos</a></li>
+            <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#precios">Precios</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón de Acción Principal -->
     <a class="nav-cta" href="#contacto">Solicitar demo</a>
+    
   </div>
 </header>
+
+<!-- ======================================================== -->
+<!-- ESTILOS CSS REFINADOS PARA EL HEADER                     -->
+<!-- ======================================================== -->
+<style>
+  /* Contenedores Base */
+  .main-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos de Enlaces */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* Espaciado elegante entre ítems */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-links a:hover {
+    color: #2563eb; /* Tu color azul de marca */
+  }
+
+  /* Estructura del Dropdown Desplegable */
+  .dropdown {
+    position: relative;
+    padding: 8px 0;
+  }
+  .chevron-icon {
+    transition: transform 0.2s ease;
+    color: #94a3b8;
+  }
+  .dropdown:hover .chevron-icon {
+    transform: rotate(180deg);
+    color: #2563eb;
+  }
+  
+  /* Menú Flotante Oculto */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.08);
+    padding: 8px 0;
+    min-width: 220px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  /* Elementos internos del Dropdown */
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.93rem;
+    color: #334155;
+    white-space: nowrap;
+  }
+  .dropdown-menu li a:hover {
+    background-color: #f8fafc;
+    color: #2563eb;
+  }
+
+  /* Adaptabilidad Móvil Básica */
+  @media (max-width: 900px) {
+    .nav-wrapper, .nav-cta {
+      display: none; /* Aquí puedes integrar tu menú hamburguesa móvil en el futuro */
+    }
+  }
+</style>
+
 
 <main id="contenido">
 
