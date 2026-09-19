@@ -74,6 +74,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://metrosuite.app/#software",
       "name": "MetroSuite",
       "url": "https://metrosuite.app",
+      sameAs": [
+        "https://www.youtube.com/channel/UC_VnQmx1otH3kBXw2KWLNjw"
+      ],
       "description": "MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos: valida, corrige y audita en tiempo real. Incluye un generador de formularios dinámicos y seguros por plantilla. Cumple ISO/IEC 17025 y CFR 21 Part 11.",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Software de metrología y gestión de calidad",
@@ -120,7 +123,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "Motor de validación en tiempo real",
         "Motor de cálculos configurables",
         "Plantillas reutilizables de equipos y calibraciones",
-        "Workflows y agentes de IA",
+        "Interoperabilidad mediante MCP (Model Context Protocol) en servidor",
+        "Semantic Bridge a nivel de frontend para flujos adaptativos",
+        "Renderizado móvil adaptativo real diseñado para ergonomía en planta",
+        "Modo offline con sincronización automática",
+        "Workflows",
         "Más de 50 calibraciones predefinidas",
         "Modo offline con sincronización automática",
         "Aislamiento multitenant",
@@ -555,7 +562,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-grid">
         <div>
           <h1>Su próxima calibración, correcta antes de guardarse.</h1>
-          <p class="hero-sub">MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos. Valida, corrige y audita cada dato en tiempo real, con la seguridad y trazabilidad que exige un entorno de misión crítica.</p>
+          <!-- =========================================================================
+     PÁRRAFO DESCRIPTIVO CON ALTO CONTRASTE Y RESALTADO (SEO/GEO)
+     ========================================================================= -->
+<p style="font-family: 'IBM Plex Sans', sans-serif; font-size: 1.2rem; line-height: 1.6; color: #1E293B; margin: 0; max-width: 600px; font-weight: 400;">
+    <strong>MetroSuite</strong> es la plataforma PaaS de Stracta para metrología y <strong>adquisición de datos críticos</strong>. 
+    <span style="color: #2A5CDB; font-weight: 600;">Valida, corrige y audita</span> cada dato en tiempo real, con la seguridad y trazabilidad que exige un entorno de misión crítica.
+</p>
+<!-- ========================================================================= -->
+
           <div class="hero-ctas">
             <a class="btn btn-primary" href="#contacto">Solicitar una demo</a>
             <a class="btn btn-ghost" href="#arquitectura">Ver la arquitectura</a>
@@ -578,11 +593,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-        <div class="readout">
-          <div class="readout-value">24.998 mm</div>
-          <div class="readout-tol">tolerancia ±0.002 · validado</div>
-          <div class="readout-meta">Orden #4482 · Micrómetro digital en tiempo real</div>
-        </div>
+<!-- =========================================================================
+     BLOQUE DE INFORMACIÓN DESTACADO (SIN H1 - TAMAÑO OPTIMIZADO)
+     ========================================================================= -->
+<div class="readout-wrapper-context" style="margin-bottom: 1.25rem; text-align: left; font-family: 'IBM Plex Sans', sans-serif;">
+    
+    <!-- 1. Rótulo de Advertencia superior en formato Mono -->
+    <p style="display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #2A5CDB; background-color: rgba(42, 92, 219, 0.1); padding: 0.3rem 0.6rem; border-radius: 4px; margin: 0 0 0.75rem 0;">
+        ⚠️ ¡Adquisición de Datos Críticos!
+    </p>
+    
+    <!-- 2. Texto explicativo con mayor impacto visual (22px y Negrita) -->
+    <p style="font-size: 22px; font-weight: 700; line-height: 1.25; color: #14181C; margin: 0; padding: 0; max-width: 380px; letter-spacing: -0.01em;">
+        Garantiza que tu toma de datos sea exacta desde el origen.
+    </p>
+    
+<!-- Tu tarjeta original sigue su flujo nativo perfectamente alineada -->
+<div class="readout">
+    <div class="readout-value">24.998 mm</div>
+    <div class="readout-tol">tolerancia ±0.002 · validado</div>
+    <div class="readout-meta">Orden #4482 · Micrómetro digital en tiempo real</div>
+</div>
+</div>
+
+
+
+
+
       </div>
     </div>
   </section>
@@ -743,34 +780,109 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- BLOQUE 5: VALIDACIÓN CIENTÍFICA (EXCEL VS METROSUITE) -->
+ 
+  <!-- =========================================================================
+       BLOQUE 5: VALIDACIÓN CIENTÍFICA (COMPARTIVA GENERAL DE MERCADO - OPTIMIZADA)
+       ========================================================================= -->
+   <!-- =========================================================================
+       BLOQUE 5: VALIDACIÓN CIENTÍFICA (COMPARTIVA GENERAL DE MERCADO - OPTIMIZADA)
+       ========================================================================= -->
   <section id="comparativa">
     <div class="wrap">
       <div class="section-head">
         <div class="kicker">comparativa</div>
-        <h2>Excel puede guardar un dato. No puede protegerlo.</h2>
-        <p style="margin-top:.75rem;">Una hoja de cálculo registra lo que se escribe en ella. MetroSuite revisa lo que se escribe antes de guardarlo.</p>
+        <h2>Sistemas de registro pasivo. No protegen tus datos críticos.</h2>
+        <p style="margin-top:.75rem;">Las herramientas tradicionales registran la información una vez ingresada. MetroSuite valida, corrige y audita el dato en el instante de la captura.</p>
       </div>
 
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th></th><th>Excel / hojas de cálculo</th><th>MetroSuite</th></tr>
+            <tr>
+              <th>Característica</th>
+              <th>Excel / hojas de cálculo</th>
+              <th>Otras aplicaciones de metrología</th>
+              <th>MetroSuite</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><th>Validación de cada dato</th><td>Se descubre en revisión manual</td><td class="win">Antes de guardar el dato</td></tr>
-            <tr><th>Cálculos y fórmulas</th><td>Manuales, se rompen al copiar celdas</td><td class="win">Configurables por campo, no se rompen</td></tr>
-            <tr><th>Trazabilidad y auditoría</th><td>Historial manual o inexistente</td><td class="win">Registros completos e inmutables</td></tr>
-            <tr><th>Control de acceso</th><td>Un archivo, sin aislamiento real</td><td class="win">Multitenant con aislamiento total</td></tr>
-            <tr><th>Trabajo sin conexión</th><td>Depende de dónde esté guardado</td><td class="win">Modo offline con sincronización automática</td></tr>
-            <tr><th>Plantillas de calibración</th><td>Se arman desde cero cada vez</td><td class="win">50+ predefinidas, más las que configure</td></tr>
-            <tr><th>Cumplimiento normativo</th><td>No es certificable por diseño</td><td class="win">Construida para ISO/IEC 17025 y CFR 21 Part 11</td></tr>
-            <tr><th>Costo de un error</th><td>Se paga en la auditoría</td><td class="win">Se corrige antes de guardar el dato</td></tr>
+            <tr>
+              <th>Validación de cada dato</th>
+              <td>Se descubre en revisión manual</td>
+              <td>Registro pasivo posterior a la calibración</td>
+              <td class="win">En el punto de captura, garantizada desde el origen</td>
+            </tr>
+            <tr>
+              <th>Cálculos y fórmulas</th>
+              <td>Manuales, se rompen al copiar celdas</td>
+              <td>Estructuras rígidas difíciles de moldear</td>
+              <td class="win">Configurables por campo, no se alteran</td>
+            </tr>
+            <tr>
+              <th>Trazabilidad y auditoría</th>
+              <td>Historial manual o inexistente</td>
+              <td>Historiales básicos dependientes de la red</td>
+              <td class="win">Registros completos e inmutables</td>
+            </tr>
+            <tr>
+              <th>Control de acceso</th>
+              <td>Un archivo, sin aislamiento real</td>
+              <td>Nubes compartidas con aislamiento lógico básico</td>
+              <td class="win">Multitenant con aislamiento total, bases de datos unicas por Tenant(Empresa)</td>
+            </tr>
+            <tr>
+              <th>Trabajo sin conexión</th>
+              <td>Depende de dónde esté guardado</td>
+              <td>Fricción o carga lenta en entornos de planta</td>
+              <td class="win">Modo offline real con sincronización automática</td>
+            </tr>
+                        <tr>
+              <th>Experiencia en campo</th>
+              <td>Inviable en pantallas de smartphone</td>
+              <td>Componentes reducidos de tamaño y difíciles de operar</td>
+              <td class="win">Listo para moviles!, Renderizado adaptativo real diseñado para dispositivos móviles</td>
+            </tr>
+                                    <tr>
+              <th>Inteligencia y Conectividad</th>
+              <td>Sistemas aislados sin capacidades de IA integradas</td>
+              <td>Integraciones rígidas mediante APIs tradicionales</td>
+              <td class="win">Interoperabilidad nativa mediante MCP (Model Context Protocol) para entornos Premium y On-premise</td>
+            </tr>
+            <tr>
+              <th>Capa de Contexto (Frontend)</th>
+              <td>Texto plano e interfaces genéricas sin contexto</td>
+              <td>Estructuras de datos rígidas que confunden al operario</td>
+              <td class="win">Semantic Bridge nativo en frontend para un flujo de información móvil e intuitivo listo para IA</td>
+            </tr>
+
+
+            <tr>
+              <th>Plantillas de calibración</th>
+              <td>Se arman desde cero cada vez</td>
+              <td>Formatos fijos que fuerzan tus flujos</td>
+              <td class="win">Generador dinámico de formularios y 50+ predefinidas</td>
+            </tr>
+            <tr>
+              <th>Cumplimiento normativo</th>
+              <td>No es certificable por diseño</td>
+              <td>Requiere módulos o complementos externos</td>
+              <td class="win">Construida para ISO/IEC 17025 y CFR 21 Part 11</td>
+            </tr>
+            <tr>
+              <th>Costo de un error</th>
+              <td>Se paga en la auditoría</td>
+              <td>Desviaciones críticas detectadas tarde</td>
+              <td class="win">Se bloquea y corrige en el punto de origen, Motor de Validacion, solo datos permitidos, alertas de errores</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </section>
+  <!-- ========================================================================= -->
+
+  <!-- ========================================================================= -->
+
 
   <!-- BLOQUE 6: RESPALDO DE INGENIERÍA E INFRAESTRUCTURA (arquitectura + origen + fundador, fusionados) -->
   <section id="arquitectura">
@@ -857,16 +969,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- BLOQUE 7: CENTRO DE CONOCIMIENTO (RECURSOS) -->
+  <!-- =========================================================================
+       BLOQUE 6: CENTRO DE CONOCIMIENTO CON CANAL OFICIAL Y WIKI (UX / SEO OPTIMIZADO)
+       ========================================================================= -->
   <section class="resources-section" id="recursos">
     <div class="resources-container">
       <div class="resources-header">
         <div class="kicker">centro de conocimiento</div>
         <h2>Recursos técnicos e ingeniería de datos</h2>
-        <p style="margin-top:.75rem;">Análisis detallados sobre cumplimiento regulatorio, arquitecturas de software industrial e integridad del dato en entornos de misión crítica.</p>
+        <p style="margin-top:.75rem;">Análisis detallados, academia audiovisual y base de conocimiento sobre cumplimiento regulatorio e integridad del dato en entornos de misión crítica.</p>
       </div>
 
       <div class="resources-grid">
 
+        <!-- CARD 1: CUMPLIMIENTO -->
         <article class="resource-card">
           <div class="card-content">
             <div class="card-meta">
@@ -882,6 +998,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </article>
 
+        <!-- CARD 2: INFRAESTRUCTURA -->
         <article class="resource-card">
           <div class="card-content">
             <div class="card-meta">
@@ -897,6 +1014,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </article>
 
+        <!-- CARD 3: INTEGRACIÓN -->
         <article class="resource-card">
           <div class="card-content">
             <div class="card-meta">
@@ -904,7 +1022,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="read-time">5 min de lectura</span>
             </div>
             <h3 class="card-title">Cómo conectar balanzas industriales a sistemas web mediante protocolos seriales</h3>
-            <p class="card-excerpt">Guía de implementación técnica utilizando la API Web Serial nativa del navegador para capturar lecturas inmutables de básculas RS-232 y RS-485 sin instalar software local pesado.</p>
+            <p class="card-excerpt">Guía de implementation técnica utilizando la API Web Serial nativa del navegador para capturar lecturas inmutables de básculas RS-232 y RS-485 sin instalar software local pesado.</p>
             <a href="/conectar-balanzas-industriales-web.html" class="card-link">
               Leer artículo técnico
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -912,6 +1030,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </article>
 
+        <!-- CARD 4: PROCESOS -->
         <article class="resource-card">
           <div class="card-content">
             <div class="card-meta">
@@ -927,11 +1046,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </article>
 
+        <!-- NEW CARD 5: ACADEMIA YOUTUBE OFICIAL METROSUITE -->
+        <article class="resource-card" style="border: 1px solid rgba(255, 0, 0, 0.15); background-color: rgba(255, 0, 0, 0.01);">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge" style="background-color: #FF0000; color: #FFFFFF;">Academia</span>
+              <span class="read-time" style="color: #FF0000; font-weight: 600;">Video Tutoriales</span>
+            </div>
+            <h3 class="card-title">MetroSuite Academia: Guías Audiovisuales Paso a Paso</h3>
+            <p class="card-excerpt">Explora nuestro canal oficial de YouTube. Tutoriales prácticos sobre la configuración de formularios dinámicos con Semantic Bridge, automatización de tolerancias metrológicas y uso adaptativo en dispositivos móviles.</p>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="card-link" style="color: #FF0000;">
+              Ver canales en YouTube
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- NEW CARD 6: WIKI TÉCNICA Y DOCUMENTACIÓN -->
+        <article class="resource-card" style="border: 1px solid rgba(71, 85, 105, 0.2); background-color: rgba(241, 245, 249, 0.2);">
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge" style="background-color: #475569; color: #FFFFFF;">Soporte</span>
+              <span class="read-time" style="color: #475569;">Base de Conocimiento</span>
+            </div>
+            <h3 class="card-title">Manuales, Documentación y Wiki Técnica Centralizada</h3>
+            <p class="card-excerpt">Nuestra base técnica y guías detalladas para auditorías ISO/IEC 17025 se encuentran en fase de desarrollo estructural. Próximamente dispondrás de manuales de integración para hardware e infraestructura industrial.</p>
+            <a href="#" class="card-link" style="color: #475569; pointer-events: none; opacity: 0.7;">
+              Wiki técnica · Próximamente
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
       </div>
 
-      <p class="resources-more"><a href="#">Ver todos los artículos →</a></p>
+      <p class="resources-more"><a href="#">Ver todos los recursos →</a></p>
     </div>
   </section>
+
 
   <!-- BLOQUE 8: CIERRE COMERCIAL (PRECIOS, FAQ, CONTACTO) -->
   <section id="preguntas">
@@ -940,6 +1092,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="kicker">preguntas frecuentes</div>
         <h2>Preguntas Frecuentes.</h2>
       </div>
+              <!-- NUEVA PREGUNTA 1: METROSUITE VS EXCEL -->
+        <details class="faq-item">
+          <summary>¿Por qué elegir MetroSuite si ya tenemos hojas de cálculo en Excel?</summary>
+          <p>Excel es un lienzo en blanco para registrar datos pasados, pero no tiene capacidad de gobernanza ni auditoría. Una hoja de cálculo almacena los errores humanos de digitación y las celdas rotas; MetroSuite los evita mediante un motor de cálculos matemáticos y validación activa en el punto de captura. Con nosotros, garantizas que la información sea exacta desde el origen, blindando tu operación contra datos corruptos antes de que lleguen al historial.</p>
+        </details>
+
+        <!-- NUEVA PREGUNTA 2: METROSUITE VS COMPETENCIA -->
+        <details class="faq-item">
+          <summary>¿En qué se diferencia MetroSuite de otros softwares de calibración tradicionales?</summary>
+          <p>La mayoría de los softwares del sector son sistemas de registro pasivos y rígidos: actúan como simples archivadores digitales (CRM-ERP) donde guardas información que ya fue procesada con fricción en campo. Nuestro enfoque es la captura de datos, procesamiento en sitio, MetroSuite destaca por seis pilares de alta ingeniería: validaciones sobre cada campo, formulas complejas sobre cada campo registro o calibracion (Incertidumbres, tolerancias),  generacion de un renderizado adaptativo real pensado ergonómicamente para teléfonos móviles, la capacidad de trabajar en modo offline real con sincronización automática inmutable,Semantic Bridge nativo en frontend para hacer de IA un ayudante y una arquitectura escalable preparada para interoperabilidad mediante MCP a nivel de servidor en entornos corporativos.</p>
+        </details>
 
       <div class="faq-list">
         <details class="faq-item">
