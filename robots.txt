@@ -1,0 +1,38 @@
+# =========================================================================
+# ARCHIVO ROBOTS.TXT OPTIMIZADO PARA SEO Y GEO - METROSUITE.APP
+# =========================================================================
+
+# 1. PERMISOS EXPLÍCITOS PARA BOTES Y MODELOS DE INTELIGENCIA ARTIFICIAL (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+# 2. RASTREO GENERAL DE BUSCADORES Y CUIDADO DE INFRAESTRUCTURA (SEO)
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /app/
+
+# 3. UBICACIÓN DEL MAPA DEL SITIO PARA LOS INDEXADORES
+Sitemap: https://metrosuite.app
+# =========================================================================

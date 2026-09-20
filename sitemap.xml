@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página Principal / Landing Page SaaS -->
+  <url>
+    <loc>https://metrosuite.app</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Artículo Técnico: Cumplimiento FDA CFR 21 Part 11 -->
+  <url>
+    <loc>https://metrosuite.app/cfr21-part11-excel.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artículo Técnico: Integración e Inmutabilidad ISO/IEC 17025 -->
+  <url>
+    <loc>https://metrosuite.app/iso17025-bases-datos-inmutables.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artículo Técnico: Conexión Web Serial API y Protocolos RS-232/485 -->
+  <url>
+    <loc>https://metrosuite.app/conectar-balanzas-industriales-web.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Artículo Técnico: Optimización de Checklists y Controles en Campo -->
+  <url>
+    <loc>https://metrosuite.app/google-forms-datos-validados.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Página Legal: Políticas de Privacidad y Tratamiento de Datos -->
+  <url>
+    <loc>https://metrosuite.app/privacidad</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
