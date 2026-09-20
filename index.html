@@ -51,106 +51,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://stracta.pro/#organization",
+      "@id": "https://stracta.pro",
       "name": "Stracta",
       "url": "https://stracta.pro",
-      "logo": "https://metrosuite.app/favicon.svg",
+      "logo": "https://metrosuite.app",
       "email": "contacto@stracta.pro",
-      "founder": { "@id": "https://metrosuite.app/#diego-beltran" },
+      "founder": { "@id": "https://metrosuite.app" },
       "areaServed": ["CO", "LatAm"],
-      "sameAs": ["https://www.linkedin.com/company/stractasuite/"]
+      "sameAs": ["https://linkedin.com"]
     },
     {
       "@type": "Person",
-      "@id": "https://metrosuite.app/#diego-beltran",
-      "name": "stracta",
-      "jobTitle": "Fundador",
-      "worksFor": { "@id": "https://stracta.pro/#organization" },
+      "@id": "https://metrosuite.app",
+      "name": "Diego Beltrán",
+      "jobTitle": "Fundador & Lead Software Engineer",
+      "worksFor": { "@id": "https://stracta.pro" },
       "description": "Más de 20 años de experiencia desarrollando plataformas empresariales sobre .NET, con 5 años en logística de alta disponibilidad y 5 años en metrología aplicada.",
       "knowsAbout": ["Plataformas .NET", "Metrología", "Logística de alta disponibilidad", "ISO/IEC 17025", "CFR 21 Part 11"]
     },
     {
       "@type": "SoftwareApplication",
-      "@id": "https://metrosuite.app/#software",
+      "@id": "https://metrosuite.app",
       "name": "MetroSuite",
       "url": "https://metrosuite.app",
-      sameAs": [
-        "https://www.youtube.com/channel/UC_VnQmx1otH3kBXw2KWLNjw"
+      "sameAs": [
+        "https://www.youtube.com/@metrosuite-m1h"
       ],
-      "description": "MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos: valida, corrige y audita en tiempo real. Incluye un generador de formularios dinámicos y seguros por plantilla. Cumple ISO/IEC 17025 y CFR 21 Part 11.",
+      "description": "MetroSuite es la plataforma PaaS de Stracta para metrología y adquisición de datos críticos: valida, corrige y audita en tiempo real.",
       "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Software de metrología y gestión de calidad",
       "operatingSystem": "Web, On-premise",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "14"
-      },
-      "publisher": { "@id": "https://stracta.pro/#organization" },
-      "author": { "@id": "https://stracta.pro/#organization" },
-      "inLanguage": "es-CO",
-      "offers": [
-                {
-          "@type": "Offer",
-          "name": "Plan Nube · SaaS",
-          "price": "150.00",
-          "priceCurrency": "USD",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org",
-          "priceSpecification": { 
-            "@type": "UnitPriceSpecification", 
-            "price": "150.00", 
-            "priceCurrency": "USD", 
-            "unitText": "MONTH" 
-          },
-          "description": "Tarifa plana por empresa, no por usuario. Incluye motor de validación y cálculos, 50+ calibraciones predefinidas, workflows y agentes IA, soporte local en español.",
-          "url": "https://metrosuite.app"
-        }
-      ,
-                {
-          "@type": "Offer",
-          "name": "Plan On-premise",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "priceValidUntil": "2027-12-31",
-          "availability": "https://schema.org",
-          "description": "Precio a medida bajo cotización. Despliegue en infraestructura propia, migración asistida de datos, cumplimiento ISO/IEC 17025 y CFR 21 Part 11.",
-          "url": "https://metrosuite.app"
-        }
-
-      ],
-      "featureList": [
-        "Motor de validación en tiempo real",
-        "Motor de cálculos configurables",
-        "Plantillas reutilizables de equipos y calibraciones",
-        "Interoperabilidad mediante MCP (Model Context Protocol) en servidor",
-        "Semantic Bridge a nivel de frontend para flujos adaptativos",
-        "Renderizado móvil adaptativo real diseñado para ergonomía en planta",
-        "Modo offline con sincronización automática",
-        "Workflows",
-        "Más de 50 calibraciones predefinidas",
-        "Modo offline con sincronización automática",
-        "Aislamiento multitenant",
-        "Interfaz 100% en español",
-        "Cumplimiento ISO/IEC 17025 y CFR 21 Part 11"
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://metrosuite.app/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "Mi equipo no sabe usar software nuevo", "acceptedAnswer": { "@type": "Answer", "text": "El onboarding es guiado, la interfaz está pensada para no requerir manual, y el soporte se da en español, en su huso horario." } },
-        { "@type": "Question", "name": "Ya usamos Excel", "acceptedAnswer": { "@type": "Answer", "text": "Excel no valida ni audita solo. En la comparativa se puede ver punto por punto lo que MetroSuite automatiza y que hoy se revisa a mano." } },
-        { "@type": "Question", "name": "El costo es alto", "acceptedAnswer": { "@type": "Answer", "text": "El retorno se mide en menos reprocesos, menos horas corrigiendo hojas de cálculo y una acreditación protegida frente a un solo dato mal capturado." } },
-        { "@type": "Question", "name": "Solo necesito un checklist simple, no una acreditación", "acceptedAnswer": { "@type": "Answer", "text": "MetroSuite parte de la misma plantilla simple que usaría en Google Forms o Jotform, pero con cálculos y validación desde el primer campo. Cuando su operación lo requiera, esa misma información ya está lista para una auditoría, sin migrar de herramienta." } },
-        { "@type": "Question", "name": "No confiamos en proveedores extranjeros", "acceptedAnswer": { "@type": "Answer", "text": "Stracta ofrece soporte local en español, con respaldo y estándares internacionales." } },
-        { "@type": "Question", "name": "Dependemos de la conexión a internet", "acceptedAnswer": { "@type": "Answer", "text": "El front funciona en modo offline, con sincronización automática, redundancia y copias de respaldo cifradas." } },
-        { "@type": "Question", "name": "Nos preocupa migrar los datos", "acceptedAnswer": { "@type": "Answer", "text": "La migración es asistida por el equipo de Stracta. La importación se mide en horas, no en semanas." } }
-      ]
+      "publisher": { "@id": "https://stracta.pro" }
     }
   ]
 }
 </script>
+
 
 <style>
   :root{
