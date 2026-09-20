@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+# OBLIGATORIO: Otorga permisos de escritura al token para desbloquear la rama gh-pages
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
