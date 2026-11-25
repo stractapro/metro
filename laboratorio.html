@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio Hostil — Pruebas MetroAgent</title>
+    <!-- 1. CSP estricto + Trusted Types -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <script>
+        // 2. Filtro estilo Bing: bloquea appendChild e insertBefore de scripts/divs externos
+        const origAppend = Node.prototype.appendChild;
+        Node.prototype.appendChild = function (node) {
+            if (node && (node.tagName === 'SCRIPT' || node.id === 'metro-agent-host')) {
+                console.warn('[LAB] Bloqueado por filtro appendChild:', node);
+                return node;
+            }
+            return origAppend.call(this, node);
+        };
+
+        // 3. Simulador de hidratación React/SPA: borra nodos extraños en <html> y <body> a los 2 segundos
+        setTimeout(() => {
+            console.warn('[LAB] Simulando re-render/hidratación SPA...');
+            document.getElementById('metro-agent-host')?.remove();
+        }, 2000);
+    </script>
+</head>
+<body>
+    <h1>Laboratorio de Pruebas Hostiles</h1>
+
+    <!-- 4. Formulario con campo trampa (Honeypot) + campo normal + botón que exige isTrusted -->
+    <form id="form-prueba" onsubmit="event.preventDefault(); document.getElementById('salida').textContent = '✅ Formulario enviado!';">
+        <input type="checkbox" name="botcheck" style="opacity:0; position:absolute; left:-9999px;" />
+        <label for="txt-nombre">Nombre del equipo</label>
+        <input id="txt-nombre" type="text" placeholder="Ej. Balanza Explorer" />
+        <button id="btn-enviar" type="submit">Guardar Equipo</button>
+    </form>
+
+    <pre id="salida">Esperando acción...</pre>
+</body>
+</html>
