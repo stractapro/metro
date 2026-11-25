@@ -1,41 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Laboratorio Hostil — Pruebas MetroAgent</title>
-    <!-- 1. CSP estricto + Trusted Types -->
+    <title>Laboratorio Hostil v2 — Pruebas MetroAgent</title>
+    <!-- 1. CSP estricto -->
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+          content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <style>
+        body { font-family: system-ui, sans-serif; padding: 20px; max-width: 720px; }
+        .card { border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+        pre { background: #0f172a; color: #38bdf8; padding: 12px; border-radius: 6px; overflow-x: auto; }
+    </style>
     <script>
-        // 2. Filtro estilo Bing: bloquea appendChild e insertBefore de scripts/divs externos
+        // 2. Filtro estilo Bing: bloquea appendChild de scripts/divs externos
         const origAppend = Node.prototype.appendChild;
         Node.prototype.appendChild = function (node) {
             if (node && (node.tagName === 'SCRIPT' || node.id === 'metro-agent-host')) {
-                console.warn('[LAB] Bloqueado por filtro appendChild:', node);
                 return node;
             }
             return origAppend.call(this, node);
         };
 
-        // 3. Simulador de hidratación React/SPA: borra nodos extraños en <html> y <body> a los 2 segundos
+        // 3. Simulador de hidratación React/SPA: borra el splitter a los 2 segundos
         setTimeout(() => {
-            console.warn('[LAB] Simulando re-render/hidratación SPA...');
             document.getElementById('metro-agent-host')?.remove();
         }, 2000);
     </script>
 </head>
 <body>
-    <h1>Laboratorio de Pruebas Hostiles</h1>
+    <h1>Laboratorio de Pruebas Hostiles v2</h1>
 
-    <!-- 4. Formulario con campo trampa (Honeypot) + campo normal + botón que exige isTrusted -->
-    <form id="form-prueba" onsubmit="event.preventDefault(); document.getElementById('salida').textContent = '✅ Formulario enviado!';">
-        <input type="checkbox" name="botcheck" style="opacity:0; position:absolute; left:-9999px;" />
-        <label for="txt-nombre">Nombre del equipo</label>
-        <input id="txt-nombre" type="text" placeholder="Ej. Balanza Explorer" />
-        <button id="btn-enviar" type="submit">Guardar Equipo</button>
-    </form>
+    <!-- PRUEBA A: Formulario con Honeypot (botcheck) + API JSON simulada -->
+    <div class="card">
+        <h3>1. Formulario + Honeypot + Respuesta API JSON</h3>
+        <form id="form-equipo">
+            <input type="checkbox" name="botcheck" style="opacity:0; position:absolute; left:-9999px;" />
+            <label for="txt-nombre">Nombre del equipo</label>
+            <input id="txt-nombre" type="text" placeholder="Ej. Balanza Explorer" />
+            <button id="btn-guardar" type="submit">Guardar Equipo</button>
+        </form>
+        <p id="estado-form">Esperando envío...</p>
+    </div>
 
-    <pre id="salida">Esperando acción...</pre>
+    <!-- PRUEBA B: Botón con validación estricta de event.isTrusted -->
+    <div class="card">
+        <h3>2. Validación de evento humano (isTrusted)</h3>
+        <button id="btn-critico" type="button">Aprobar Calibración Crítica</button>
+        <p id="estado-trusted">Sin pulsar todavía</p>
+    </div>
+
+    <!-- PRUEBA C: Iframe embebido con otro formulario adentro -->
+    <div class="card">
+        <h3>3. Formulario dentro de Iframe</h3>
+        <iframe id="frame-interno" style="width:100%; height:110px; border:1px dashed #94a3b8;"
+                srcdoc="<html><body style='font-family:sans-serif;'><label for='serie-frame'>Número de Serie (Iframe)</label><input id='serie-frame' type='text' placeholder='SN-9988'/><button id='btn-frame' onclick=&quot;document.body.insertAdjacentHTML('beforeend','<span id=ok-frame> ✅ OK Iframe</span>')&quot;>Validar Serie</button></body></html>">
+        </iframe>
+    </div>
+
+    <script>
+        // Simulación de API backend con fetch() real sobre Blob JSON para probar el interceptor de red
+        document.getElementById('form-equipo').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const honeypot = document.querySelector('input[name="botcheck"]').checked;
+            const nombre = document.getElementById('txt-nombre').value;
+
+            const payloadRespuesta = honeypot
+                ? { ok: false, error: "BOT_DETECTADO_HONEYPOT" }
+                : { ok: true, idGenerado: 4501, equipo: nombre, certificado: "CERT-2026-88" };
+
+            // Hacemos un fetch() real a un Blob JSON para que el interceptor de red del agente lo capture
+            const blob = new Blob([JSON.stringify(payloadRespuesta)], { type: 'application/json' });
+            const urlSimulada = URL.createObjectURL(blob);
+            const res = await fetch(urlSimulada);
+            const json = await res.json();
+
+            document.getElementById('estado-form').textContent = json.ok
+                ? `✅ Guardado en API: ID ${json.idGenerado} (${json.certificado})`
+                : `❌ Bloqueado: ${json.error}`;
+        });
+
+        // Prueba de isTrusted
+        document.getElementById('btn-critico').addEventListener('click', (e) => {
+            document.getElementById('estado-trusted').textContent = e.isTrusted
+                ? "✅ Clic REAL humano/Playwright (isTrusted = true)"
+                : "⚠️ Clic sintético JS (isTrusted = false)";
+        });
+    </script>
 </body>
 </html>
