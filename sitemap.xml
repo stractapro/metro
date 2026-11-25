@@ -48,5 +48,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
+<url>
+    <loc>https://metrosuite.app/laboratorio</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
 </urlset>
